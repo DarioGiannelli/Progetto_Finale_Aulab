@@ -1,1 +1,17 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import './loginForm.css';
+
+/* Variabili colori e font */
+
+:root {
+
+    --Rosso: rgb(254, 95, 85);
+    --GhostWhite: rgb(247, 247, 255);
+    --BluChiaro: rgb(189, 213, 234);
+    --bluScuro: rgb(87, 115, 153);
+    --Grigio: rgb(73, 88, 103);
+    
+    --font1: 'Josefin Sans', sans-serif;
+    --font2: 'Comfortaa', cursive;
+    
+    }
