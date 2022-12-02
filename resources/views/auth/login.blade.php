@@ -31,7 +31,7 @@
             </div>
 
             <div class="col-12">
-                <input type="text" placeholder="your email" />
+                <input type="text" placeholder="your email" name='email' />
             </div>
 
             <div class="col-12">
@@ -39,7 +39,7 @@
             </div>
 
             <div class="col-12">
-                <input type="password" placeholder="your password" />
+                <input type="password" placeholder="" name='password'/>
             </div>
         </div>
         
@@ -53,4 +53,4 @@
     </form>
 </div>
 
-<x-layout/>
+</x-layout>

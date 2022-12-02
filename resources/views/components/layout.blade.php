@@ -22,6 +22,7 @@
     <title>Document</title>
 </head>
 <body>
+    <x-navbar/>
     {{ $slot }}
     
 </body>
