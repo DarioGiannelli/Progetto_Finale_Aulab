@@ -17,4 +17,4 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [PublicController::class , 'home'])->name('home');
 
-Route::get('/nuovo/annuncio', [ProductController::class, 'createProduct'])->name('create.product');
+Route::get('/nuovo/annuncio', [ProductController::class, 'show'])->name('create.product');

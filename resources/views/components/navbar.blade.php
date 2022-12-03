@@ -41,7 +41,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#"> Prodotto <span class="span">+</span> </a>
+              <a class="nav-link" aria-current="page" href="{{ route('create.product') }}"> Prodotto <span class="span">+</span> </a>
             </li>
 
           @endAuth
