@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300');
 
+:root {
+
+  --Rosso: rgb(254, 95, 85);
+  --GhostWhite: rgb(247, 247, 255);
+  --BluChiaro: rgb(189, 213, 234);
+  --bluScuro: rgb(87, 115, 153);
+  --Grigio: rgb(73, 88, 103);
+  
+  --font1: 'Josefin Sans', sans-serif;
+  --font2: 'Comfortaa', cursive;
+  
+  }
+
 body {
   display: grid;
   place-items: center;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(to right, #114357, #F29492, #f64f59);
+  background: linear-gradient(to bottom, var(--bluScuro) , var(--BluChiaro) );
 }
 
 .login-form {
-  width: 300px;
+  width: 400px;
   padding: 50px;
   border-radius: 12px;
   /* border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -90,4 +103,12 @@ button:hover {
 
 .fa-solid{
     color: #114357;
+}
+
+@media screen and (max-width: 420px){
+
+  .login-form{
+    width: 300px;
+  }
+
 }
