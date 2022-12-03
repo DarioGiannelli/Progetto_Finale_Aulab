@@ -1,20 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300');
-
-:root {
-
-  --Rosso: rgb(254, 95, 85);
-  --GhostWhite: rgb(247, 247, 255);
-  --BluChiaro: rgb(189, 213, 234);
-  --bluScuro: rgb(87, 115, 153);
-  --Grigio: rgb(73, 88, 103);
-  
-  --font1: 'Josefin Sans', sans-serif;
-  --font2: 'Comfortaa', cursive;
-  
-  }
+@import './var.css';
 
 body {
-  display: grid;
+  /* display: grid; */
   place-items: center;
   height: 100vh;
   margin: 0;

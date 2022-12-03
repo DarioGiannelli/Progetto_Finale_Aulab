@@ -2,21 +2,12 @@
 @import './loginForm.css';
 @import './productsForm.css';
 @import './navbar.css';
+@import './masthead.css';
+
 
 /* Variabili colori e font */
+@import './var.css';
 
-:root {
-
-    --Rosso: rgb(254, 95, 85);
-    --GhostWhite: rgb(247, 247, 255);
-    --BluChiaro: rgb(189, 213, 234);
-    --bluScuro: rgb(87, 115, 153);
-    --Grigio: rgb(73, 88, 103);
-    
-    --font1: 'Josefin Sans', sans-serif;
-    --font2: 'Comfortaa', cursive;
-    
-    }
 
 body{
     background-color: var(--GhostWhite);
