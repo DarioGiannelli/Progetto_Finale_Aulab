@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Product;
 use Livewire\Component;
 use App\Http\Livewire\CreateProduct;
+use Illuminate\Support\Facades\Auth;
 
 class CreateProduct extends Component
 {
@@ -12,6 +13,7 @@ class CreateProduct extends Component
     public $description;
     public $price;
     public $brand;
+    public $category;
 
     public function store()
     {
@@ -20,6 +22,9 @@ class CreateProduct extends Component
             'description'=>$this->description,
             'price'=>$this->price,
             'brand'=>$this->brand,
+            'user_id'=>Auth::id(),
+            "category_id"=>$this->category,
+
         ]);
     }
 

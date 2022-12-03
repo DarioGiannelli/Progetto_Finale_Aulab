@@ -20,7 +20,6 @@ return new class extends Migration
             $table->text('description');
             $table->float('price', 12,2);
             $table->string('brand');
-            $table->string('slug');
 
 
             //FOREIGN KEY
