@@ -1,5 +1,4 @@
 <x-layout>
-    <x-masthead/>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6">
@@ -16,12 +15,13 @@
                     <p class="card-text">{{$product->description}}</</p>
                     <p class="card-text">{{$product->price}}</</p>
                     <a href="{{route('categoryShow', $product->category)}}" class="btn btn-primary">Categoria {{$product->category->name}}</a>
-                    <p class="card-footer">Pubblicato il:{{$product->created_at->format('d/m/Y')}}</</p>
+                    <p class="card-footer">Pubblicato il:{{$product->created_at->format('d/m/Y')}} - Autore :{{$product->user->name ?? ''}}</</p>
                     <a href="{{route('products.show', $product)}}" class="btn btn-primary">Visualizza</a> 
                 </div>
                 </div>
             </div>
         @endforeach
+        {{$products->links()}}
         </div>
     </div>
 </x-layout>

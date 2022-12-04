@@ -17,4 +17,9 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [PublicController::class , 'home'])->name('home');
 
-Route::get('/nuovo/annuncio', [ProductController::class, 'createProduct'])->name('product.create');
+Route::get('/nuovo/annuncio', [ProductController::class, 'createProduct'])->middleware('auth')->name('product.create');
+
+Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
+
+Route::get('/dettaglio/annuncio/{product}', [ProductController::class, 'showProduct'])->name('products.show');
+Route::get('/annunci', [ProductController::class, 'indexProduct'])->name('products.index');

@@ -49,6 +49,17 @@ class ProductController extends Controller
 
     }
 
+    public function indexProduct()
+    {   
+        $products = Product::paginate(6);
+        return view('products.index', compact('products'));
+    }
+
+    public function showProduct(Product $product)
+    {
+        return view('products.show', compact('product'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

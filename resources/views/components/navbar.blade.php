@@ -1,6 +1,7 @@
 <!-- NAVBAR-->
 
 
+
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
 
@@ -15,6 +16,9 @@
           <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
               <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{ Route('products.index') }}">Annunci</a>
               </li>
               {{-- @guest
                   <li class="nav-item">
@@ -36,7 +40,7 @@
                   </a>
                   <ul class="dropdown-menu">
                       @foreach ($categories as $category)
-                          <li><a class="dropdown-item" href="#">{{$category->name}}</a></li>
+                          <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
                       @endforeach                
                   </ul>
               </li>
