@@ -30,7 +30,7 @@
                   <a href="" class="nav-item nav-link active">Bentornato {{ Auth::user()->name }}</a>
               </li>
               <li class="nav-item">
-                  <a href="{{ Route('product.create') }}" class="nav-link active">Crea annuncio</a>
+                  <a href="{{ Route('products.create') }}" class="nav-link active">Crea annuncio</a>
               </li>
               @endauth
               

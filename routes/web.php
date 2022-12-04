@@ -17,7 +17,7 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [PublicController::class , 'home'])->name('home');
 
-Route::get('/nuovo/annuncio', [ProductController::class, 'createProduct'])->middleware('auth')->name('product.create');
+Route::get('/nuovo/annuncio', [ProductController::class, 'createProduct'])->middleware('auth')->name('products.create');
 
 Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
 
