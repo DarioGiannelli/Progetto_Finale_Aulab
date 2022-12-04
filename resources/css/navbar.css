@@ -1,28 +1,25 @@
+@import './var.css';
 
 /* Variabili colori e font */
 
-:root {
-
-    --Rosso: rgb(254, 95, 85);
-    --GhostWhite: rgb(247, 247, 255);
-    --BluChiaro: rgb(189, 213, 234);
-    --bluScuro: rgb(87, 115, 153);
-    --Grigio: rgb(73, 88, 103);
-    
-    --font1: 'Josefin Sans', sans-serif;
-    --font2: 'Comfortaa', cursive;
-    
-}
 
 .span{
     color: var(--Rosso);
     font-weight: bold;
 }
 
-.titoloNavbar{
-    font-family: var(--font1);
-    font-size: 25px;
+
+nav .nav-link{
+    color: black !important;
+    transition: 0.4s;
 }
+
+nav .nav-link:hover{
+    color: rgb(13, 110, 253) !important;
+    transform: translateY(-8px);
+}
+
+
 
 .a-cust{
     display: flex;
@@ -30,3 +27,4 @@
     /* justify-content: center; */
     align-items: center;
 }
+

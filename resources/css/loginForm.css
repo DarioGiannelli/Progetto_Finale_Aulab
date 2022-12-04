@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300');
 @import './var.css';
 
-body {
-  /* display: grid; */
-  place-items: center;
-  height: 100vh;
-  margin: 0;
-  background: linear-gradient(to bottom, var(--bluScuro) , var(--BluChiaro) );
-}
+
 
 .login-form {
   width: 400px;

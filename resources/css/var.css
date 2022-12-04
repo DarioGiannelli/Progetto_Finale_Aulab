@@ -1,4 +1,4 @@
-:root {
+/* :root {
 
     --Rosso: rgb(254, 95, 85);
     --GhostWhite: rgb(247, 247, 255);
@@ -9,4 +9,16 @@
     --font1: 'Josefin Sans', sans-serif;
     --font2: 'Comfortaa', cursive;
     
-    }
+    } */
+
+    :root {
+
+        --Rosso: rgb(255, 68, 55);
+        --GhostWhite: rgb(247, 247, 255);
+        --BluChiaro: rgb(189, 213, 234);
+        --bluScuro: rgb(13, 110, 253);
+        
+        --font1: 'Josefin Sans', sans-serif;
+        --font2: 'Comfortaa', cursive;
+        
+        }

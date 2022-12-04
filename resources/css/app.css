@@ -8,7 +8,15 @@
 /* Variabili colori e font */
 @import './var.css';
 
-
-body{
-    background-color: var(--GhostWhite);
+*{
+    overflow-x: 0;
 }
+
+body {
+    /* place-items: center; */
+    /* height: 100vh; */
+    margin: 0;
+    /* background: linear-gradient(to bottom, var(--bluScuro) , var(--BluChiaro) ); */
+    background-color: var(--GhostWhite);
+    background-repeat: no-repeat;
+  }
