@@ -23,5 +23,23 @@
         @endforeach
         {{$products->links()}}
         </div>
+
+        {{-- @foreach ($products as $product)
+        <div class="col-12 col-md-4 my-3">
+        <div class="containerCust">
+            <div class="card">
+              <div class="box">
+                <div class="content">
+                  <h2>01</h2>
+                  <h3>Card One</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+        @endforeach --}}
+
     </div>
 </x-layout>
