@@ -22,6 +22,7 @@
 
     <!-- Livewire -->
     @livewireStyles
+
     @vite(['resources/css/app.css','resources/js/app.js'])
     <title>Document</title>
 </head>
@@ -36,6 +37,7 @@
 
 
     
-  @livewireScripts  
+    @livewireScripts  
+  
 </body>
 </html>
