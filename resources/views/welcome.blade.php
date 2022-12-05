@@ -2,24 +2,24 @@
     <x-masthead/>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 d-flex justify-content-center my-5">
-                <h2 class="text-white display-3">Le nostre categorie:</h2>
+            <div class="col-12">
+                <h2 class="text-white text-center display-3">Le nostre categorie:</h2>
             </div>
             @foreach ($categories as $category)
-                <div class="col-3 col-md-2 text-center">
+                <div class="col-6 col-md-2 text-center">
                     <a href="{{route('categoryShow', $category)}}">
                         <i class="{{ $category->icon }} fa-2x my-3 text-yellow"></i>
                         <h3>{{ $category->name }}</h3>
                     </a>
                 </div>
             @endforeach
-            <div class="col-12 d-flex justify-content-center my-5">
-                <h2 class="text-white display-3">Ultimi prodotti:</h2>
+            <div class="col-12">
+                <h2 class="text-white display-3 text-center mt-5">Ultimi prodotti:</h2>
             </div>
         </div>
         <div class="row">
             @foreach ($products as $product)
-                <div class="col-12 col-md-3 my-5 d-flex justify-content-center">
+                <div class="col-12 col-md-4 my-5 d-flex justify-content-center">
                     <div class="cardCust">
                         <div class="imgbox">
                             <div class="imgCust"></div>

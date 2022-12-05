@@ -1,8 +1,29 @@
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="col-12 col-md-4 my-5 d-flex justify-content-center">
+  <div class="cardCust">
+      <div class="imgbox">
+          <div class="imgCust"></div>
+      </div>
+      <div class="details container-fluid">
+          <div class="row">
+              <div class="col-12">
+                  <h2 class="title">{{$product->name}}</h2>
+              </div>
+              <div class="col-12">
+                  <span class="caption">{{$product->description}}</span>
+              </div>
+              <div class="col-12">
+                  <span class="caption">€ {{$product->price}}</span>
+              </div>
+              <div class="col-12">
+                  <a href="{{route('categoryShow', $product->category)}}" class="caption">Categoria: {{$product->category->name}}</a>
+              </div>
+              <div class="col-12">
+                  <span class="caption">Pubblicato il: {{$product->created_at->format('d/m/Y')}} - Autore :{{$product->user->name ?? ''}}</</span>
+              </div>
+              <div class="col-12 mt-2">
+                  <a href="{{route('products.show', $product)}}" class="btn btn-primary btnCard">Visualizza</a> 
+              </div>
+          </div>
+      </div>
   </div>
 </div>

@@ -1,0 +1,12 @@
+@import './var.css';
+
+.togglerDark{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .backgroundDark{
+    background-color: rgb(39, 35, 35);
+    color: rgb(237, 226, 226);
+  }

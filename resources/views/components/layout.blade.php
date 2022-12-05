@@ -28,7 +28,7 @@
 </head>
 
 
-<body class="bg-primary">
+<body class="bg-primary" id="body">
 
     <x-navbar/>
 
@@ -36,7 +36,10 @@
 
 
 
-    
+    <button id="darkMode" class="btn btn-dark togglerDark d-flex justify-content-center align-items-center">
+        <i id="bulb" class="fa-solid fa-lightbulb "></i>
+    </button>
+
     @livewireScripts  
   
 </body>
