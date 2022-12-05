@@ -9,12 +9,12 @@
 }
 
 
-nav .nav-link{
+nav .nav-link , button{
     color: black !important;
     transition: 0.4s;
 }
 
-nav .nav-link:hover{
+nav .nav-link:hover , button:hover{
     color: rgb(13, 110, 253) !important;
     transform: translateY(-8px);
 }
@@ -27,4 +27,22 @@ nav .nav-link:hover{
     /* justify-content: center; */
     align-items: center;
 }
+
+.linkAuth{
+    width: 128px;
+}
+
+.verde{
+background-color: var(--verde);
+}
+
+.giallo{
+ background-color: var(--giallo);
+}
+
+.rosso{
+    background-color: var(--Rosso);
+}
+
+
 

@@ -7,12 +7,16 @@
 
 
       <h1 class="m-0 text-primary">PRESTO<span class="span">.</span>it</h1>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> -->
+      <button class="navbar-toggler my-3 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <i id="arrow" class="fa-solid fa-arrow-down"></i>
+    </button>
 
 
-      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
               <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
@@ -52,24 +56,35 @@
               </li>
 
           </ul>
-          <!-- <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-          </form> -->
-          
-          <div class="d-flex">
+
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            
+            <!-- <div class="btnAuth ms-auto"> -->
             @guest
-              <a href="{{ Route('login') }}" class="btn btn-success rounded-pill py-2 px-4 me-3 d-none d-lg-block">Login</a>
-              <a href="{{ Route('register') }}" class="btn btn-warning rounded-pill py-2 px-4 me-3 d-none d-lg-block">Registrati</a>
+
+            <li class="nav-item ms-5 ms-lg-0">
+                <a href="{{ Route('login') }}" class="linkAuth verde nav-link btn rounded-pill my-2 py-2 px-4 me-3 d-lg-block">Login</a>
+              </li>
+
+              <li class="nav-item ms-5 ms-lg-0">
+                <a href="{{ Route('register') }}" class="linkAuth giallo nav-link btn rounded-pill my-2 py-2 px-4 me-3 d-lg-block">Registrati</a>
+              </li>
 
             @endguest
             @auth
-              <form action="{{ route('logout') }}" method="POST">
+
+            <li class="nav-item ms-5 ms-lg-0">
+                <form action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button class="btn btn-danger rounded-pill py-2 px-4 me-3 d-none d-lg-block">Logout</button>
-              </form>
+                <button class="linkAuth btn rosso rounded-pill py-2 px-4  ms-auto">Logout</button>
+                </form>
+              </li>
             @endauth
-          </div>
+            <!-- </div> -->
+            
+        </ul>
+          
+          
       </div>
   </div>
 </nav>

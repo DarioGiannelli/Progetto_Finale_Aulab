@@ -26,7 +26,7 @@ h1 {
   text-align: center
 }
 
-input, button {
+input, .btnLogin {
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -65,22 +65,16 @@ a {
   justify-content: space-between;;
 }
 
-button {
+.btnLogin {
   cursor: pointer;
-  background: #F29492;
+  background: var(--Rosso);
   color: white;
   transition: 0.5s;
 }
 
-button:hover {
-  background: #114357;
+.btnLogin:hover {
+  background: var(--verde);
   box-shadow: 1px 1px 1px white;
-}
-
-.blob {
-  position: absolute;
-  top: 30vh;
-  left: calc(50% - 300px);
 }
 
 .fa-solid{

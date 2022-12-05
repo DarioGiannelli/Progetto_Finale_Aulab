@@ -28,7 +28,7 @@
                         </div>
                    </div>
             
-                    <button type="submit">Vai</button>
+                    <button class="btnLogin" type="submit">Vai</button>
                     <div class="forgot-signup">
                         <a href="#" class="signup">Forgot password?</a>
                         <a href="#" class="signup">Registrati</a>

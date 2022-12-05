@@ -27,7 +27,7 @@
   /* text-align: center */
 }
 
-input, button {
+input, .btnForm {
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -50,7 +50,7 @@ input:focus {
   outline: none;
 }
 
-textarea, button {
+textarea, .btnForm {
   /* display: block;  */
   box-sizing: border-box;
   width: 100%;

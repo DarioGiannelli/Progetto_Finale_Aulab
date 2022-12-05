@@ -54,7 +54,7 @@
     
     </div>
 
-    <button type="submit" class="btn-cust">clicca per inviarlo in revisione</button>
+    <button type="submit" class="btn-cust btnForm">clicca per inviarlo in revisione</button>
 </form>
 
 </div>
