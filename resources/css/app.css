@@ -22,3 +22,7 @@ body {
     background-color: var(--GhostWhite);
     background-repeat: no-repeat;
   }
+
+.text-yellow{
+    color: var(--giallo);
+}

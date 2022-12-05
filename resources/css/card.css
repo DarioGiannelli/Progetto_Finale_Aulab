@@ -1,7 +1,6 @@
 @import './var.css';
 
 .btnCard{
-    /* style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" */
     padding-top: .25rem;
     padding-bottom: .25rem;
     padding-left: .5rem;

@@ -3,6 +3,17 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 d-flex justify-content-center my-5">
+                <h2 class="text-white display-3">Le nostre categorie:</h2>
+            </div>
+            @foreach ($categories as $category)
+                <div class="col-3 col-md-2 text-center">
+                    <a href="{{route('categoryShow', $category)}}">
+                        <i class="{{ $category->icon }} fa-2x my-3 text-yellow"></i>
+                        <h3>{{ $category->name }}</h3>
+                    </a>
+                </div>
+            @endforeach
+            <div class="col-12 d-flex justify-content-center my-5">
                 <h2 class="text-white display-3">Ultimi prodotti:</h2>
             </div>
         </div>
