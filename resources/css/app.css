@@ -6,6 +6,7 @@
 @import './card.css';
 @import './cardDetail.css';
 @import './darkMode.css';
+@import './prodottoSingolo.css';
 
 
 /* Variabili colori e font */
@@ -20,7 +21,7 @@ body {
     /* height: 100vh; */
     margin: 0;
     /* background: linear-gradient(to bottom, var(--bluScuro) , var(--BluChiaro) ); */
-    background-color: var(--GhostWhite);
+    /* background-color: var(--GhostWhite); */
     background-repeat: no-repeat;
   }
 

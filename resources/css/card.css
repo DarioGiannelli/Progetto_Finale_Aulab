@@ -9,7 +9,12 @@
 
 }
 
-
+.prodottoSingolo{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+}
 
   .details {
     position: absolute;

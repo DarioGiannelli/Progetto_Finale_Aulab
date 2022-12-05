@@ -35,11 +35,6 @@
     {{ $slot }}
 
 
-
-    <button id="darkMode" class="btn btn-dark togglerDark d-flex justify-content-center align-items-center">
-        <i id="bulb" class="fa-solid fa-lightbulb "></i>
-    </button>
-
     @livewireScripts  
   
 </body>
