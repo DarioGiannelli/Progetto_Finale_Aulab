@@ -15,7 +15,7 @@
                     <p> Nome : {{$user->name}}</p>
                     <p> Email : {{$user->email}}</p>  
                     <p> Se vuoi renderlo revisore</p>
-                    <a href="{{route('make.revisor'), compact('user')}}"> Rendi revisore.</a>
+                    <a href="{{route('make.revisor', compact('user'))}}"> Rendi revisore.</a>
             </div>
         </div>
  
