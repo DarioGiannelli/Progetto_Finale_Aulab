@@ -7,6 +7,7 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Http\Livewire\CreateProduct;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Validator;
 
 class CreateProduct extends Component
 {
@@ -29,10 +30,14 @@ class CreateProduct extends Component
         'min'=>'Sono necessari almeno 4 caratteri',
         'numeric'=>'L\'importo deve essere un numero',
     ];
+
+   
     
     public function store()
     {
         $category = Category::find($this->category);
+        $this->validate();
+
         $product = $category->products()->create([        
             'name'=>$this->name,
             'description'=>$this->description,
@@ -40,16 +45,18 @@ class CreateProduct extends Component
             'brand'=>$this->brand,
         ]);
 
-        Auth::user()->products()->save($product);
         
+        Auth::user()->products()->save($product);
         session()->flash('message', 'Annuncio inserito con successo');
         $this->cleanForm();
     }
+   
 
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
     }
+
 
     public function cleanForm()
     {
@@ -60,6 +67,8 @@ class CreateProduct extends Component
         $this->category = '';
 
     }
+
+
 
     public function render()
     {

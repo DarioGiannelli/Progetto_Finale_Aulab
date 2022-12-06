@@ -35,14 +35,30 @@
                       <a href="{{ route('register') }}" class="nav-link active">Registrati</a>
                   </li>  
               @endguest --}}
+
+             
               @auth
+           
               <li class="nav-item">
                   <a href="" class="nav-item nav-link active">Bentornato {{ Auth::user()->name }}</a>
               </li>
+             
               <li class="nav-item">
                   <a href="{{ Route('products.create') }}" class="nav-link active">Crea annuncio</a>
               </li>
+              @if(Auth::user()->is_revisor)
+              <li class="nav-item position-relative">
+                  <a href="{{Route('revisor.index')}} " class="nav-item nav-link active">Zona Revisore 
+                    <span class="position-absolute top-0  start-100 translate-middle badge rounded-pill bg-danger">
+                        {{ App\Models\Product::toBeRevisionedCount()}}
+                         <span class="visually-hidden">unread Messages</span> 
+                    </span>
+                  </a>
+              </li> 
+              @endif
               @endauth
+            
+            
               
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
