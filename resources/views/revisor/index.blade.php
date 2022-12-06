@@ -2,6 +2,11 @@
     
 <div class="container">
     <div class="row">
+    @if (session()->has('message'))
+    <div class="flex flex-rox justify-center my-2 alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
         <div class="col-12">
             <h1> {{$product_to_check ? 'Annuncio da revisionare' : 'Nessun annuncio da revisionare.'}}</h1>
         </div>
