@@ -29,10 +29,11 @@
 
             <div class="col-12 d-flex justify-content-center">
                 <textarea id="" cols="50" rows="10" placeholder="inserisci la descrizione del tuo prodotto"wire:model="description" class="form-control @error('description') is-invalid @enderror" >{{ old('description') }}</textarea>
-                    @error('description')
+                    
+            </div>
+            @error('description')
                         {{$message}}
                     @enderror
-            </div>
 
             <div class="mb-3">
                 
