@@ -36,7 +36,7 @@ class Product extends Model
     }
 
     public static function toBeRevisionedCount()  {
-        return Product::where('is_accepted',null)->count();
+        return Product::where('is_accepted', null)->count();
     }
 
    

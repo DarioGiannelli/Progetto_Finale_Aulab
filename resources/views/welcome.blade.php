@@ -1,8 +1,15 @@
 <x-layout>
+@if (session()->has('message'))
+    <div class="flex flex-rox justify-center my-2 alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
+
     <x-masthead/>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
+
                 <h2 class="text-white text-center display-3">Le nostre categorie:</h2>
             </div>
             @foreach ($categories as $category)
