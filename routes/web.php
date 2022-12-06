@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,16 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', [PublicController::class , 'home'])->name('home');
+//CREATA ROTTA REVISORE DARIO
+Route::get('/revisor/home', [RevisorController::class , 'index'])->middleware('isRevisor')->name('revisor.index');
+
+//Rotta accettazione
+Route::patch('/accetta/annuncio/{product}',[RevisorController::class,'acceptProduct'])->middleware('isRevisor')->name('revisor.accept_product');
+//Rotta rifiuto
+Route::patch('/rifiuta/annuncio/{product}',[RevisorController::class,'rejectProduct'])->middleware('isRevisor')->name('revisor.reject_product');
+
+
+
 
 Route::get('/nuovo/annuncio', [ProductController::class, 'createProduct'])->middleware('auth')->name('products.create');
 
@@ -23,3 +34,8 @@ Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->
 
 Route::get('/dettaglio/annuncio/{product}', [ProductController::class, 'showProduct'])->name('products.show');
 Route::get('/annunci', [ProductController::class, 'indexProduct'])->name('products.index');
+
+
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+
+Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');

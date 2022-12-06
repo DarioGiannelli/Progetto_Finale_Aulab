@@ -11,7 +11,7 @@ class PublicController extends Controller
     //
     public function home(){
 
-        $products = Product::take(6)->get()->sortByDesc('created_at');
+        $products = Product::where('is_accepted',true)->take(6)->get()->sortByDesc('created_at');
         
         return view('welcome', compact('products'));
         
