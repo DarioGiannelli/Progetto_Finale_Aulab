@@ -14,21 +14,21 @@
         <div class="row justify-content-center">
             
             <div class="col-12">
-                <input type="text" wire:model="name"  placeholder="inserisci il nome del tuo prodotto" class="form-control @error('name') is-invalid @enderror">
+                <input type="text" wire:model="name"  placeholder="inserisci il nome del tuo prodotto" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}">
                 @error('name')
                 {{$message}}
                 @enderror
             </div>
             
             <div class="col-12">
-                <input type="text" placeholder="inserisci il brand del tuo prodotto" wire:model="brand" class="form-control @error('brand') is-invalid @enderror">
+                <input type="text" placeholder="inserisci il brand del tuo prodotto" wire:model="brand" class="form-control @error('brand') is-invalid @enderror" value="{{ old('brand') }}">
                 @error('brand')
                     {{$message}}
                 @enderror
             </div>
 
             <div class="col-12 d-flex justify-content-center">
-                <textarea id="" cols="50" rows="10" placeholder="inserisci la descrizione del tuo prodotto"wire:model="description" class="form-control @error('description') is-invalid @enderror"></textarea>
+                <textarea id="" cols="50" rows="10" placeholder="inserisci la descrizione del tuo prodotto"wire:model="description" class="form-control @error('description') is-invalid @enderror" >{{ old('description') }}</textarea>
                     @error('description')
                         {{$message}}
                     @enderror
@@ -45,7 +45,7 @@
             </div>
 
             <div class="col-12">
-                <input type="number" placeholder="inserisci il prezzo del prodotto" wire:model="price" class="form-control @error('price') is-invalid @enderror" >
+                <input type="number" placeholder="inserisci il prezzo del prodotto" wire:model="price" class="form-control @error('price') is-invalid @enderror" value="{{ old('price') }}">
                 @error('price')
                     {{$message}}
                 @enderror
