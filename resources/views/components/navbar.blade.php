@@ -5,9 +5,9 @@
 <nav id="navbar" class="navbar navbar-expand-lg bg-light sticky-top">
   <div class="container-fluid">
 
-    <button id="darkMode" class="mx-3 my-3 btn btn-dark togglerDark d-flex justify-content-center align-items-center">
-        <i id="bulb" class="fa-solid fa-lightbulb "></i>
-    </button>
+        {{-- <button id="darkMode" class="me-3 my-3 btn btn-dark togglerDark d-flex justify-content-center align-items-center">
+            <i id="bulb" class="fa-solid fa-lightbulb "></i>
+        </button> --}}
 
       <h1 id="titoloNav" class="m-0 text-primary">PRESTO<span class="span">.</span>it</h1>
       <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,6 +21,9 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
+                
+                    
+                
               <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
               </li>
@@ -84,6 +87,7 @@
               </li>
             @endauth
             <!-- </div> -->
+            
             
         </ul>
           
