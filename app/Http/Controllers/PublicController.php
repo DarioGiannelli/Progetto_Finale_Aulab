@@ -21,4 +21,14 @@ class PublicController extends Controller
     {
         return view('categoryShow', compact('category'));
     }
+
+    public function searchProducts(Request $request){
+        $products = Product::search($request->searched)->where('is_accepted',true)->paginate(10);
+        
+        return view('products.index', compact('products'));
+    }
 }
+
+
+
+

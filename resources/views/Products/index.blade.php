@@ -7,12 +7,21 @@
         </div>
         <div class="row">
             
-            @foreach ($products as $product)
+            @forelse ($products as $product)
                 <x-card 
                     :product='$product'
 
+
                 />
-            @endforeach
+                @empty
+                <div class="col-12">
+                    <div class="alert-warning py-3 shadow">
+                         <p class="lead">
+                             Non ci sono annunci per questa ricerca
+                        </p>
+                    </div>
+                </div>
+            @endforelse
             <div class="col-12 d-flex justify-content-center">
                 {{$products->links()}}
             </div>
