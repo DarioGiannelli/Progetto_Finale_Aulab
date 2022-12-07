@@ -106,6 +106,10 @@
             
             
         </ul>
+        <form class="d-flex" method="GET" action="{{route('products.search')}}">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched">
+        <button class="btn btn-outline-success" type="submit">Cerca</button>
+      </form>
           
           
       </div>
