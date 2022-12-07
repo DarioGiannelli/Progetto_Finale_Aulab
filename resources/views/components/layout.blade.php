@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    {{-- CDN FONT TITOLO --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
+
     <!-- FONT 1 CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +33,13 @@
 </head>
 
 
-<body class="bg-primary" id="body">
+<body id="body">
+    <div class="min-vh-100">
+        <x-navbar/>
 
-    <x-navbar/>
-
-    {{ $slot }}
+        {{ $slot }}
+    </div>
+    
 
     <x-footer/>
     @livewireScripts  

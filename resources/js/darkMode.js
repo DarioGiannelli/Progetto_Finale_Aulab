@@ -1,45 +1,52 @@
-let darkMode = document.getElementById('darkMode');
-let body = document.getElementById('body');
-let navbar = document.getElementById('navbar');
-let titoloNav = document.getElementById('titoloNav');
-let bulb = document.getElementById('bulb');
 
+
+let body = document.getElementById('body');
+// let nav = document.querySelector('nav');
+let header = document.getElementById('header');
+let box = document.getElementById('box');
+let toggle = document.getElementById('toggle');
 
 let confirm = false;
-bulb.classList.add('text-warning');
 
 
-darkMode.addEventListener('click' , ()=>{
+body.classList.add('lightTheme');
+header.classList.add('header');
+toggle.classList.add('toggleLight');
+
+box.addEventListener('click' , ()=>{
 
     if(confirm == false){
 
-        titoloNav.classList.remove('text-primary');
+        toggle.style.transform = "translate(-30px)";
 
-        titoloNav.classList.add('darkModeNav');
+        // header.classList.remove('header');
+        // header.classList.add('headerDark');
 
-        navbar.classList.remove('bg-light');
+        toggle.classList.add('toggleDark');
+        toggle.classList.remove('toggleLight');
 
-        navbar.classList.add('darkModeNav');
 
-        bulb.classList.remove('text-warning');
+        body.classList.remove('lightTheme');
+        body.classList.add('darkTheme');
 
-        bulb.classList.add('text-black');
+        // nav.classList.add('darkThemeNav');
 
         confirm = true;
 
     } else {
 
-        titoloNav.classList.add('text-primary');
+        toggle.style.transform = "translate(0px)";
 
-        titoloNav.classList.remove('darkModeNav');
+        // header.classList.remove('headerDark');
+        // header.classList.add('header');
 
-        navbar.classList.add('bg-light');
+        toggle.classList.remove('toggleDark');
+        toggle.classList.add('toggleLight');
 
-        navbar.classList.remove('darkModeNav');
-
-        bulb.classList.remove('text-black');
-
-        bulb.classList.add('text-warning');
+        body.classList.remove('darkTheme');
+        body.classList.add('lightTheme');
+        // nav.classList.remove('darkThemeNav');
+        // nav.classList.add('darkTheme');
 
         confirm = false;
 

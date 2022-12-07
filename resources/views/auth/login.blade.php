@@ -17,21 +17,21 @@
                                 <i class="fa-solid fa-at"></i>
                             </div>
                             <div class="col-10">
-                                <input type="text" placeholder="your email" name='email' />
+                                <input class="rounded-pill" type="text" placeholder="your email" name='email' />
                             </div>
                             <div class="col-2 d-flex flex-column justify-content-center">
                                 <i class="fa-solid fa-unlock"></i>
                             </div>
                             <div class="col-10">
-                                <input type="password" placeholder="your password" name='password'/>
+                                <input class="rounded-pill" type="password" placeholder="your password" name='password'/>
                             </div>
                         </div>
                    </div>
             
-                    <button class="btnLogin" type="submit">Vai</button>
+                    <button class="btnLogin rounded-pill" type="submit">Vai</button>
                     <div class="forgot-signup">
                         <a href="#" class="signup">Forgot password?</a>
-                        <a href="#" class="signup">Registrati</a>
+                        <a href="{{ Route('register') }}" class="signup">Registrati</a>
                     </div>
                 </form>
             </div>
