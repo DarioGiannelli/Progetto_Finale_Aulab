@@ -1,4 +1,14 @@
+.category{
+  background: linear-gradient(180deg, rgba(255,255,255,1) 32%, rgba(251,251,255,0.75) 62%, rgba(247,247,255,0) 100%);
+  color: var(--grigioScuro) !important;
+}
 
+.emphasis{
+  border-radius: 30px;
+  /* background: #e0e0e0; */
+  box-shadow: 15px 15px 30px var(--bluScuro),
+              -15px -15px 30px var(--bluScuro);
+}
 
 .bg-mast{
   background-color: var(--BluChiaro);

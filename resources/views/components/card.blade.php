@@ -9,7 +9,9 @@
                   <h2 class="title">{{$product->name}}</h2>
               </div>
               <div class="col-12">
-                  <span class="caption">{{$product->description}}</span>
+                <span class="caption">
+                        {{ substr($product->description, 0, 15) . '...'}}
+                </span>
               </div>
               <div class="col-12">
                   <span class="caption">€ {{$product->price}}</span>
@@ -21,7 +23,7 @@
                   <span class="caption">Pubblicato il: {{$product->created_at->format('d/m/Y')}} - Autore :{{$product->user->name ?? ''}}</</span>
               </div>
               <div class="col-12 mt-2">
-                  <a href="{{route('products.show', $product)}}" class="btn btn-primary btnCard">Visualizza</a> 
+                  <a href="{{route('products.show', $product)}}" class="btn btn-primary btnCard rounded-pill">Visualizza</a> 
               </div>
           </div>
       </div>

@@ -7,24 +7,28 @@
 
     <x-masthead/>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row category">
             <div class="col-12">
 
-                <h2 class="text-white text-center display-3">Le nostre categorie:</h2>
+                <h2 class="text-center display-3 my-5">Le nostre categorie:</h2>
             </div>
             @foreach ($categories as $category)
-                <div class="col-6 col-md-2 text-center">
-                    <a href="{{route('categoryShow', $category)}}">
-                        <i class="{{ $category->icon }} fa-2x my-3 text-yellow"></i>
-                        <h3>{{ $category->name }}</h3>
-                    </a>
+                <div class="col-6 col-md-2 text-center d-flex align-items-center justify-content-center my-3">
+                    
+                        <a href="{{route('categoryShow', $category)}}" class="btn rounded-pill d-flex align-items-center justify-content-center boxIcon">
+                            <i class="{{ $category->icon }} fa-3x my-5 text-white categoryIcon"></i>
+                            {{-- <h3 class="mb-4">{{ $category->name }}</h3> --}}
+                        </a>
+                    
                 </div>
             @endforeach
-            <div class="col-12">
-                <h2 class="text-white display-3 text-center mt-5">Ultimi prodotti:</h2>
-            </div>
         </div>
+    </div>
+    <div class="container my-5">
         <div class="row">
+            <div class="col-12">
+                <h2 class="display-3 text-center mt-5">Ultimi prodotti:</h2>
+            </div>
             @foreach ($products as $product)
                 <div class="col-12 col-md-4 my-5 d-flex justify-content-center">
                     <div class="cardCust">
@@ -37,7 +41,7 @@
                                     <h2 class="title">{{$product->name}}</h2>
                                 </div>
                                 <div class="col-12">
-                                    <span class="caption">{{$product->description}}</span>
+                                    <span class="caption">{{ substr($product->description, 0, 15) . '...'}}</span>
                                 </div>
                                 <div class="col-12">
                                     <span class="caption">€ {{$product->price}}</span>
@@ -49,7 +53,7 @@
                                     <span class="caption">Pubblicato il: {{$product->created_at->format('d/m/Y')}}</</span>
                                 </div>
                                 <div class="col-12 mt-2">
-                                    <a href="{{route('products.show', $product)}}" class="btn btn-primary btnCard">Visualizza</a> 
+                                    <a href="{{route('products.show', $product)}}" class="btn btn-primary btnCard rounded-pill">Visualizza</a> 
                                 </div>
                             </div>
                         </div>
