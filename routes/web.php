@@ -39,3 +39,6 @@ Route::get('/annunci', [ProductController::class, 'indexProduct'])->name('produc
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+
+Route::get('/ricerca/annuncio', [PublicController::class, 'searchProducts'])->name('products.search');
