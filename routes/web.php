@@ -17,6 +17,8 @@ use App\Http\Controllers\RevisorController;
 */
 
 Route::get('/', [PublicController::class , 'home'])->name('home');
+
+
 //CREATA ROTTA REVISORE DARIO
 Route::get('/revisor/home', [RevisorController::class , 'index'])->middleware('isRevisor')->name('revisor.index');
 
