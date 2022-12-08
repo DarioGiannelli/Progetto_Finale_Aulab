@@ -20,7 +20,7 @@
                   <a href="{{route('categoryShow', $product->category)}}" class="caption">Categoria: {{$product->category->name}}</a>
               </div>
               <div class="col-12">
-                  <span class="caption">Pubblicato il: {{$product->created_at->format('d/m/Y')}} - Autore :{{$product->user->name ?? ''}}</</span>
+                  <span class="caption">Pubblicato il: {{$product->created_at->format('d/m/Y')}} - Autore: {{$product->user->name ?? ''}}</</span>
               </div>
               <div class="col-12 mt-2">
                   <a href="{{route('products.show', $product)}}" class="btn btn-primary btnCard rounded-pill">Visualizza</a> 

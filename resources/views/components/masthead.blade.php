@@ -41,10 +41,20 @@
             <div class="col-lg-6 text-lg-start d-flex flex-column align-items-center justify-content-center">
                 <h1 class="d-flex  mb-4 animated slideInDown display-1">PRESTO<span class="span">.</span>it</h1>
                 <p class=" pb-3 animated slideInDown fs-3 text-center">Tutto ciò che vuoi vendere ed acquistare... anche dal divano di casa!</p>
+                @guest
+                    <div>
+                        <a href="{{ Route('login') }}" class="btn giallo text-dark py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Vendi subito</a>
+                        <a href="{{ Route('login') }}" class="btn verde  py-sm-3 px-sm-5 rounded-pill animated slideInRight">Compra... PRESTO!</a>
+                    </div>
+                @endguest
+                @auth
                 <div>
-                    <a href="" class="btn giallo text-dark py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Vendi subito</a>
-                    <a href="" class="btn verde  py-sm-3 px-sm-5 rounded-pill animated slideInRight">Compra... PRESTO!</a>
+                    <a href="{{ Route('products.create') }}" class="btn giallo text-dark py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Vendi subito</a>
+                    <a href="{{ Route('products.index') }}" class="btn verde  py-sm-3 px-sm-5 rounded-pill animated slideInRight">Compra... PRESTO!</a>
                 </div>
+                @endauth
+                
+                
             </div>
             <div class="col-lg-6 text-lg-start d-flex jusify-content-center">
                 
