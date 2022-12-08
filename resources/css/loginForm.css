@@ -75,6 +75,7 @@ a {
 .btnLogin:hover {
   background: var(--verde);
   box-shadow: 1px 1px 1px white;
+  color: white;
 }
 
 .fa-solid{

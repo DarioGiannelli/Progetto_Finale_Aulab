@@ -2,7 +2,7 @@
     <div class="container login-form my-5">
         <div class="row">
             <div class="col-8">
-                <h1 class="">Login </h1>
+                <h1>Login</h1>
             </div>
             <div class="col-4 d-flex flex-column justify-content-center text-center">
                 <i class="fa-regular fa-id-card fa-2x mx-1"></i>

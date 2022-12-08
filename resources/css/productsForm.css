@@ -7,7 +7,7 @@
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-right: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  border: 1px solid var(--bluScuro);
+  /* border: 1px solid var(--bluScuro); */
   backdrop-filter: blur(12px);
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -24,7 +24,7 @@
   color: var(--GhostWhite);
   letter-spacing: 2px;
   margin-top: 0;
-  /* text-align: center */
+
 }
 
 input, .btnForm {
@@ -43,33 +43,10 @@ input, .btnForm {
 }
 
 input::placeholder {
-  color: var(--grigio);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 input:focus {
-  outline: none;
-}
-
-textarea, .btnForm {
-  /* display: block;  */
-  box-sizing: border-box;
-  width: 100%;
-  margin: 20px auto;
-  padding: 12px 20px;
-  font-size: 16px;
-  border: none;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 13px 21px rgba(0, 0, 0, 0.05);
-  color: var(--GhostWhite);
-}
-
-textarea::placeholder {
-  color: var(--grigio);
-}
-
-textarea:focus {
   outline: none;
 }
 
@@ -78,6 +55,31 @@ a {
   text-decoration: none;
   font-size: 16px;
 }
+
+textarea, .btnForm{
+  /* display: block;  */
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px auto;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 13px 21px rgba(0, 0, 0, 0.05);
+  color: var(--GhostWhite);
+}
+
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+
 
 .btn-cust {
   cursor: pointer;

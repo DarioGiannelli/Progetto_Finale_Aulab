@@ -35,7 +35,7 @@
             </div>
 
             <div class="col-4 d-flex flex-column justify-content-center text-center">
-                <i class="fa-solid fa-user-plus fa-2x"></i>
+                <i class="ms-4 fa-solid fa-user-plus fa-2x"></i>
                 {{-- <i class="fa-solid fa-address-card"></i> --}}
             </div>
             <div class="col-12">
@@ -47,30 +47,30 @@
                                         <i class="fa-solid fa-address-card"></i>
                                     </div>
                                     <div class="col-10">
-                                        <input type="text" placeholder="username" name='name' />
+                                        <input class="rounded-pill" type="text" placeholder="username" name='name' />
                                     </div>
                                     <div class="col-2 d-flex flex-column justify-content-center">
                                         <i class="fa-solid fa-at"></i>
                                     </div>
                                     <div class="col-10">
-                                        <input type="text" placeholder="email" name='email' />
+                                        <input class="rounded-pill" type="text" placeholder="email" name='email' />
                                     </div>
                                     <div class="col-2 d-flex flex-column justify-content-center">
                                         <i class="fa-solid fa-unlock"></i>
                                     </div>
                                     <div class="col-10">
-                                        <input type="password" placeholder="password" name='password'/>
+                                        <input class="rounded-pill" type="password" placeholder="password" name='password'/>
                                     </div>
                                     <div class="col-2 d-flex flex-column justify-content-center">
                                         <i class="fa-solid fa-unlock"></i>
                                     </div>
                                     <div class="col-10">
-                                        <input type="password" placeholder="check password" name='password_confirmation'/>
+                                        <input class="rounded-pill" type="password" placeholder="check password" name='password_confirmation'/>
                                     </div>
                                 </div>
                         </div>
             
-                    <button type="submit">Vai</button>
+                    <button class="btnLogin rounded-pill" type="submit">Vai</button>
                 </form>
             </div>
         </div>
