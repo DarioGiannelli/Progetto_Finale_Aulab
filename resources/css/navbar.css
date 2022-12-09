@@ -21,8 +21,6 @@ nav .nav-link:hover , button:hover{
     transform: translateY(-8px);
 }
 
-
-
 .a-cust{
     display: flex;
     /* flex-direction: column; */
@@ -36,21 +34,6 @@ nav .nav-link:hover , button:hover{
 
 }
 
-.verde{
-background-color: var(--verde);
-}
-
-.giallo{
- background-color: var(--giallo);
-}
-
-.rosso{
-    background-color: var(--Rosso);
-}
-
-.blu{
-    background-color: var(--blu);
-}
 
 
 

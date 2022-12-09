@@ -28,7 +28,7 @@
             </div>
 
             <div class="col-12 d-flex justify-content-center">
-                <textarea class="" id="" cols="50" rows="4" placeholder="inserisci la descrizione del tuo prodotto"wire:model="description" class="form-control @error('description') is-invalid @enderror" >{{ old('description') }}</textarea>
+                <textarea class="" id="" cols="50" rows="3" placeholder="inserisci la descrizione del tuo prodotto"wire:model="description" class="form-control @error('description') is-invalid @enderror" >{{ old('description') }}</textarea>
                     
             </div>
             @error('description')

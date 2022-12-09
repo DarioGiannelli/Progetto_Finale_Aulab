@@ -26,3 +26,31 @@
         --font2: 'Comfortaa', cursive;
         --fontTitolo: 'Titillium Web', sans-serif;
         }
+
+        .verde{
+            background-color: var(--verde);
+        }
+
+        .testoVerde{
+            color: green;
+        }
+            
+        .giallo{
+            background-color: var(--giallo);
+        }
+            
+        .rosso{
+            background-color: var(--Rosso);
+        }
+            
+        .testoRosso{
+            color: var(--Rosso);
+        }
+
+        .testoBianco{
+            color: var(--GhostWhite);
+        }
+            
+        .blu{
+            background-color: var(--blu);
+        }

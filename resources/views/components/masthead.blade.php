@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row align-item-center">
             <div class="col-lg-6 text-lg-start d-flex flex-column align-items-center justify-content-center">
-                <h1 class="d-flex  mb-4 animated slideInDown display-1">PRESTO<span class="span">.</span>it</h1>
+                <h1 id="titoloMasthead" class="d-flex mb-4 animated slideInDown display-1">PRESTO<span id="spanMasthead" class="span">.</span>it</h1>
                 <p class=" pb-3 animated slideInDown fs-3 text-center">Tutto ciò che vuoi vendere ed acquistare... anche dal divano di casa!</p>
                 @guest
                     <div>
@@ -37,10 +37,11 @@
                 
                 
             </div>
-            <div class="col-lg-6 text-lg-start d-flex jusify-content-center">
+            <div id="mastheadWrapper" class="col-lg-6 text-lg-start d-flex jusify-content-center">
                 
-                <img class="img-fluid img-cust" src="img/masthead1_.jpg" alt="">
-        
+                 <img id="immagineMasthead" class="img-fluid img-cust" src="img/masthead1_.jpg" alt="">
+                <!-- <img id="immagineMastheadNatale" class="img-fluid img-cust" src="img/cappelloMasthead.png" alt="">  -->
+
             </div>
         </div>
     </div>

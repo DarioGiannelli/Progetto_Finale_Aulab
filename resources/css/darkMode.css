@@ -1,5 +1,7 @@
 @import './var.css';
 
+@import './star.css';
+
 .box{
   position: relative;
   display: flex;

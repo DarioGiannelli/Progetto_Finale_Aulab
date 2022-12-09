@@ -8,6 +8,7 @@
 @import './cardDetail.css';
 @import './darkMode.css';
 @import './prodottoSingolo.css';
+@import './snow.css';
 /* @import './parallax.css'; */
 
 
@@ -48,8 +49,11 @@ body {
 .lightTheme{
     color: var(--grigioScuro);
     background: linear-gradient(60deg, var(--bluScuro) 0%, rgb(20, 207, 231) 100%);
-  
+}
 
+.christmasTheme{
+  background-color: green;
+    color: var(--GhostWhite);
 }
 
 /* parallax */

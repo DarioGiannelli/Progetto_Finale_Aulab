@@ -1,14 +1,13 @@
-
-
 let body = document.getElementById('body');
 let box = document.getElementById('box');
 let toggle = document.getElementById('toggle');
+let starsWrapper = document.getElementById('starsWrapper');
 
 let confirm = false;
 
-
 body.classList.add('lightTheme');
 toggle.classList.add('toggleLight');
+starsWrapper.innerHTML = '';
 
 box.addEventListener('click' , ()=>{
 
@@ -22,6 +21,13 @@ box.addEventListener('click' , ()=>{
         body.classList.remove('lightTheme');
         body.classList.add('darkTheme');
 
+        starsWrapper.innerHTML = `
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div id="stars4"></div>
+        `
+
         confirm = true;
 
     } else {
@@ -33,6 +39,8 @@ box.addEventListener('click' , ()=>{
 
         body.classList.remove('darkTheme');
         body.classList.add('lightTheme');
+
+        starsWrapper.innerHTML = '';
 
         confirm = false;
 

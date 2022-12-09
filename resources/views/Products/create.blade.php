@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container my-5">
+    <div class="container my-4">
         <div class="row justify-content-center">
             <div class="col-12 col-md-7">
                 <div class="container">
@@ -17,11 +17,11 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="col-5">
-                <h2>
-                    immagine
-                </h2>
-            </div> --}}
+
+            <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                <img class="img-fluid img-cust" src="/img/product.png" alt="">
+            </div>
+       
         </div>
     </div>  
 
