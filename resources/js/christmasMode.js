@@ -3,9 +3,6 @@ let christmas = document.getElementById('christmas');
 let titoloMasthead = document.getElementById('titoloMasthead');
 let spanMasthead = document.getElementById('spanMasthead');
 let snowWrapper = document.getElementById('snowWrapper');
-let mastheadWrapper = document.getElementById('mastheadWrapper');
-let immagineMasthead = document.getElementById('immagineMasthead');
-let immagineMastheadNatale = document.getElementById('immagineMastheadNatale');
 
 snowWrapper.innerHTML='';
 
