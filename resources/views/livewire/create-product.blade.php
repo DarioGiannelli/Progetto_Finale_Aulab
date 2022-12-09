@@ -3,7 +3,7 @@
     
 <!-- FORM DI PROVA -->
 @if (session()->has('message'))
-    <div class="flex flex-rox justify-center my-2 alert alert-success">
+    <div class="flex flex-rox justify-center my-2 alert alert-success rounded-pill">
         {{ session('message') }}
     </div>
 @endif
@@ -37,10 +37,10 @@
 
             <div class="mb-3">
                 
-                <select wire:model.defer="category" id="category" class="form-control rounded-pill">
-                    <option>Scegli la Categoria</option>
+                <select wire:model.defer="category" id="category" class="form-control select rounded-pill my-2">
+                    <option class="text-dark">Scegli la Categoria</option>
                     @foreach ($categories as $category)
-                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        <option class="text-dark" value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
                 </select>            
             </div>
@@ -55,7 +55,7 @@
     
     </div>
 
-    <button type="submit" class="btn-cust btnForm rounded-pill">clicca per inviarlo in revisione</button>
+    <button type="submit" class="btn-cust blu text-white btnForm btnForm2 rounded-pill">pubblica</button>
 </form>
 
 </div>

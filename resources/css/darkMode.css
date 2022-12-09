@@ -30,5 +30,5 @@ transition: 0.4s;
 }
 
 .toggleLight{
-  background-color: rgb(5, 36, 113);
+  background-color: var(--blu);
 }

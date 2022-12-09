@@ -9,7 +9,7 @@
                             <h1 class="h1-cust">Crea nuovo annuncio</h1>
                         </div>
                         <div class="col-12 col-md-3 d-flex justify-content-center my-3 order-md-first">
-                            <i class="fa-solid fa-cart-plus fa-2x d-flex flex-column justify-content-center"></i>
+                            <i class="fa-solid fa-cart-plus text-white fa-3x d-flex flex-column justify-content-center"></i>
                         </div>
                         <div class="col-12">
                             <livewire:create-product>

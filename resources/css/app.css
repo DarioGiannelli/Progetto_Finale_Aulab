@@ -20,7 +20,7 @@
 
 .categoryIcon{
     
-  color: rgba(32, 51, 192, 0.869) !important;
+  color: var(--blu) !important;
 }
 
 
@@ -40,7 +40,7 @@ body {
 }
 
 .darkTheme{
-    background: linear-gradient(60deg, rgb(40, 29, 85) 0%, rgb(14, 112, 75) 100%);
+    background: linear-gradient(60deg, rgb(31, 20, 75) 0%, rgb(8, 73, 48) 100%);
     color: var(--GhostWhite);
     /* background-repeat: no-repeat; */
 }
@@ -70,16 +70,12 @@ body {
   .header {
     position:relative;
     text-align:center;
-    /* background: linear-gradient(60deg, var(--bluScuro) 0%, rgb(20, 207, 231) 100%); */
-    /* background: linear-gradient(60deg, rgb(40, 29, 85) 0%, rgb(14, 112, 75) 100%); */
-
     color:white;
   }
 
   .headerDark {
     position:relative;
     text-align:center;
-    /* background: linear-gradient(60deg, rgb(40, 29, 85) 0%, rgb(14, 112, 75) 100%); */
     color:white;
   }
 

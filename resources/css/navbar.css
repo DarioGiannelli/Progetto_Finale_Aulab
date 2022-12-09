@@ -12,7 +12,7 @@
 
 
 nav .nav-link , button{
-    color: black !important;
+    color: black ;
     transition: 0.4s;
 }
 
@@ -46,6 +46,10 @@ background-color: var(--verde);
 
 .rosso{
     background-color: var(--Rosso);
+}
+
+.blu{
+    background-color: var(--blu);
 }
 
 

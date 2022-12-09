@@ -95,7 +95,7 @@
             @guest
 
             <li class="nav-item ms-5 ms-lg-0 d-flex align-items-center">
-                <a href="{{ Route('login') }}" class="verde nav-link btn rounded-pill my-2 py-2 px-4 ms-5 me-3 d-lg-block">Login</a>
+                <a href="{{ Route('login') }}" class="verde nav-link text-white btn rounded-pill my-2 py-2 px-4 ms-5 me-3 d-lg-block">Login</a>
             </li>
 
             {{--<li class="nav-item ms-5 ms-lg-0 d-flex align-items-center">
