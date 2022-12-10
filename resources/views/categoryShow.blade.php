@@ -11,13 +11,15 @@
                     :product='$product'
                 />
             @empty
-                <div class="col-12">
-                    <p class='h1'> Non sono presenti annunci per questa categoria</p>
-                    <p class='h2'> pubblicane uno : <a href="{{route('products.create')}}" class='btn btn-success'>Nuovo annuncio </a></p>
+                <div class="col-12 my-5 d-flex flex-column align-items-center min-vh-100">
+                    <p class="h1 text-center">Non sono presenti annunci per questa categoria</p>
+                    <p class="h2 text-center">pubblicane uno</p>
+                    <a href="{{route('products.create')}}" class='btn btn-success my-3'>Nuovo annuncio </a>
                 </div>
             @endforelse
         {{-- <div class="col-12 d-flex justify-content-center">
             {{$products->links()}}
         </div> --}}
+
     </div>
 </x-layout>

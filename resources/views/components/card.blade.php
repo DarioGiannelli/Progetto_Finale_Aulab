@@ -7,6 +7,7 @@
           <div class="row">
               <div class="col-12">
                   <h2 class="title">{{$product->name}}</h2>
+                  
               </div>
               <div class="col-12">
                   <span class="caption">{{$product->getDescriptionSubstring()}}</span>
@@ -18,10 +19,10 @@
                   <a href="{{route('categoryShow', $product->category)}}" class="caption">Categoria: {{$product->category->name}}</a>
               </div>
               <div class="col-12">
-                  <span class="caption">Pubblicato il: {{$product->created_at->format('d/m/Y')}} - Autore :{{$product->user->name ?? ''}}</</span>
+                  <span class="caption">Pubblicato il: {{$product->created_at->format('d/m/Y')}} - Autore: {{$product->user->name ?? ''}}</</span>
               </div>
               <div class="col-12 mt-2">
-                  <a href="{{route('products.show', $product)}}" class="btn btn-primary btnCard rounded-pill">Visualizza</a> 
+                <a href="{{route('products.show', $product)}}" class="btnCard rounded-pill"><i class="fa-solid text-primary fa-2x fa-circle-info"></i></a> 
               </div>
           </div>
       </div>

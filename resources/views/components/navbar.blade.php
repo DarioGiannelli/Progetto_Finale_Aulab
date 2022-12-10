@@ -27,6 +27,11 @@
               <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
               </li>
+
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"><i id="christmas" class="fa-solid fa-gift"></i></a>
+              </li>
+
               <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{{ Route('products.index') }}">Annunci</a>
               </li>
@@ -70,6 +75,7 @@
                       @endforeach                
                   </ul>
               </li>
+
               {{-- <li class="nav-item">
                   <a class="nav-link">Chi Siamo</a>
               </li>
@@ -95,7 +101,7 @@
             @guest
 
             <li class="nav-item ms-5 ms-lg-0 d-flex align-items-center">
-                <a href="{{ Route('login') }}" class="verde nav-link btn rounded-pill my-2 py-2 px-4 ms-5 me-3 d-lg-block">Login</a>
+                <a href="{{ Route('login') }}" class="verde nav-link text-white btn rounded-pill my-2 py-2 px-4 ms-5 me-3 d-lg-block">Login</a>
             </li>
 
             {{--<li class="nav-item ms-5 ms-lg-0 d-flex align-items-center">

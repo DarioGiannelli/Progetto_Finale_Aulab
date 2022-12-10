@@ -67,14 +67,13 @@ a {
 
 .btnLogin {
   cursor: pointer;
-  background: var(--Rosso);
-  color: white;
+  background: var(--blu);
   transition: 0.5s;
 }
 
 .btnLogin:hover {
-  background: var(--verde);
   box-shadow: 1px 1px 1px white;
+  color: white !important;
 }
 
 .fa-solid{

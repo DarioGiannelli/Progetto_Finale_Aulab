@@ -1,12 +1,127 @@
 <x-layout>
+
     <div class="container-fluid my-4 mt-5">
         <div class="row">
             <div class="col-12">
-                <h1>Annuncio: {{$product->name}}</h1>
+                <h1>Prodotto selezionato</h1>
             </div>
         </div>
     </div>
-    <div class="container">
+    
+    <div class="container prodotto mb-5">
+        <div class="row">
+            {{-- swiper --}}
+            <div class="col-12 col-md-6">
+                <div class="container">
+                    <div class="row">
+                        {{-- swiper --}}
+                        <div class="col-12">
+                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 rounded-4">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                </div>
+                                <div thumbsSlider="" class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" class=" rounded-4"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" class=" rounded-4"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" class=" rounded-4"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" class=" rounded-4"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" class=" rounded-4"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" class=" rounded-4"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" class=" rounded-4"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" class=" rounded-4"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" class=" rounded-4"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" class=" rounded-4"/>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="col-12">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="description">
+                    <h2 class="h1">{{$product->name}}</h2>
+
+                    <h3>Descrizione</h3>
+                    
+                    <p class="mx-3">{{$product->description}}</p>
+                       
+                    <h3>Caricato da:</h3>
+        
+                    <p>{{$product->user->name}}</p>
+        
+                    <h3>Il:</h3>
+        
+                    <p>{{$product->created_at->format('d/m/Y')}}</p>
+        
+                    <h3>Categoria:</h3>
+        
+                    <a href="{{route('categoryShow', $product->category)}}" class="btn btn-primary rounded-pill">Categoria {{$product->category->name}}</a>
+                    
+                </div>
+                <button class="btn btn-danger rounded-pill">ADD TO CART</button>
+            </div>
+
+        </div>
+    </div>
+
+    {{-- <div class="container">
         <div class="row">
             <div class="col-12">
 
@@ -46,8 +161,8 @@
 
             </div>
         </div>
-    </div>
-    <div class="container my-4 mt-5">
+    </div> --}}
+    {{-- <div class="container my-4 mt-5">
         <div class="row">
             <div class="col-12">
          
@@ -57,7 +172,6 @@
 			                <div class="photo-main">
 				                <div class="controls">
 					                <i class="material-icons">share</i>
-					                <i class="material-icons">favorite_border</i>
 				                </div>
 				                <img src="https://res.cloudinary.com/john-mantas/image/upload/v1537291846/codepen/delicious-apples/green-apple-with-slice.png" alt="green apple slice">
 			                </div>
@@ -67,7 +181,29 @@
 					        <li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537303532/codepen/delicious-apples/half-apple.png" alt="half apple"></li>
 					        <li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537303160/codepen/delicious-apples/green-apple-flipped.png" alt="green apple"></li>
 					        <li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537303708/codepen/delicious-apples/apple-top.png" alt="apple top"></li>
-				        </ul>
+				        </ul> 
+
+                        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active" data-bs-interval="10000">
+                                <img src="https://picsum.photos/30" class="d-block" alt="...">
+                              </div>
+                              <div class="carousel-item" data-bs-interval="2000">
+                                <img src="https://picsum.photos/30" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="https://picsum.photos/30" class="d-block w-100" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
 			        </div>
 
 		                </div>
@@ -76,7 +212,6 @@
 	                <div class="product__info">
 		                <div class="title">
 			                <h1>{{$product->name}}</h1>
-			                <span>COD: 45999</span>
 		                </div>
 
 		                <div class="price">
@@ -99,19 +234,23 @@
                
             <h3>Caricato da:</h3>
 
-            <p>{{$product->user->name}} - {{$product->created_at->format('d/m/Y')}}</p>
+            <p>{{$product->user->name}}</p>
+
+            <h3>Il:</h3>
+
+            <p>{{$product->created_at->format('d/m/Y')}}</p>
 
             <h3>Categoria:</h3>
 
-            <a href="{{route('categoryShow', $product->category)}}" class="btn btn-primary">Categoria {{$product->category->name}}</a>
+            <a href="{{route('categoryShow', $product->category)}}" class="btn btn-primary rounded-pill">Categoria {{$product->category->name}}</a>
             
 		</div>
-		<button class="buy--btn">ADD TO CART</button>
+		<button class="buy--btn rounded-pill">ADD TO CART</button>
 	</div>
-</section>
+</section> --}}
 
             </div>
         </div>
-    </div> --}}
+    </div>
 
 </x-layout>

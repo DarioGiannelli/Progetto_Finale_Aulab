@@ -1,17 +1,13 @@
-
-
 let body = document.getElementById('body');
-// let nav = document.querySelector('nav');
-let header = document.getElementById('header');
 let box = document.getElementById('box');
 let toggle = document.getElementById('toggle');
+let starsWrapper = document.getElementById('starsWrapper');
 
 let confirm = false;
 
-
 body.classList.add('lightTheme');
-header.classList.add('header');
 toggle.classList.add('toggleLight');
+starsWrapper.innerHTML = '';
 
 box.addEventListener('click' , ()=>{
 
@@ -19,17 +15,18 @@ box.addEventListener('click' , ()=>{
 
         toggle.style.transform = "translate(-30px)";
 
-        // header.classList.remove('header');
-        // header.classList.add('headerDark');
-
         toggle.classList.add('toggleDark');
         toggle.classList.remove('toggleLight');
-
 
         body.classList.remove('lightTheme');
         body.classList.add('darkTheme');
 
-        // nav.classList.add('darkThemeNav');
+        starsWrapper.innerHTML = `
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div id="stars4"></div>
+        `
 
         confirm = true;
 
@@ -37,16 +34,13 @@ box.addEventListener('click' , ()=>{
 
         toggle.style.transform = "translate(0px)";
 
-        // header.classList.remove('headerDark');
-        // header.classList.add('header');
-
         toggle.classList.remove('toggleDark');
         toggle.classList.add('toggleLight');
 
         body.classList.remove('darkTheme');
         body.classList.add('lightTheme');
-        // nav.classList.remove('darkThemeNav');
-        // nav.classList.add('darkTheme');
+
+        starsWrapper.innerHTML = '';
 
         confirm = false;
 

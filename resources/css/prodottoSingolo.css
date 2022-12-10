@@ -1,3 +1,5 @@
+@import './swiper.css';
+
 /* ----- Variables ----- */
 /* ----- Global ----- */
 /* * {
@@ -16,30 +18,36 @@
     background-color: #01e37f;
   } */
   
-  h3 {
+  /* h3 {
     font-size: 0.7em;
     letter-spacing: 1.2px;
     color: #a6a6a6;
-  }
+  } */
   
-  img {
+  /* img {
     max-width: 100%;
     filter: drop-shadow(1px 1px 3px #a6a6a6);
   }
-  
+   */
+  .prodotto{
+    padding: 2.5em 0;
+    background-color: var(--GhostWhite);
+    border-radius: 25px;
+  }
+
   /* ----- Product Section ----- */
   .product {
-    display: grid;
-    grid-template-columns: 0.9fr 1fr;
-    margin: auto;
+    /* display: grid; */
+    /* grid-template-columns: 0.9fr 1fr; */
+    /* margin: auto; */
     padding: 2.5em 0;
-    min-width: 600px;
-    background-color: white;
-    border-radius: 5px;
+    /* min-width: 600px; */
+    background-color: var(--GhostWhite);
+    border-radius: 25px;
   }
   
   /* ----- Photo Section ----- */
-  .product__photo {
+  /* .product__photo {
     position: relative;
   }
   
@@ -50,12 +58,12 @@
     grid-template-rows: 1fr;
     width: 100%;
     height: 100%;
-    border-radius: 6px;
+    border-radius: 25px;
     box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
   }
   
   .photo-main {
-    border-radius: 6px 6px 0 0;
+    border-radius: 25px 25px 0 0;
     background-color: #9be010;
     background: radial-gradient(#e5f89e, #96e001);
   }
@@ -78,7 +86,7 @@
   
   .photo-album {
     padding: 0.7em 1em;
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 25px 25px;
     background-color: #fff;
   }
   .photo-album ul {
@@ -92,10 +100,10 @@
     padding: 7px;
     border: 1px solid #a6a6a6;
     border-radius: 3px;
-  }
+  } */
   
   /* ----- Informations Section ----- */
-  .product__info {
+  /*.product__info {
     padding: 0.8em 0;
   }
   
@@ -173,9 +181,12 @@
   }
   .buy--btn:active {
     transform: scale(0.97);
-  }
+  } */
   
+
   /* ----- Footer Section ----- */
+
+  /*
   footer {
     padding: 1em;
     text-align: center;
@@ -186,4 +197,4 @@
   }
   footer a:hover {
     color: #ff3f40;
-  }
+  } */

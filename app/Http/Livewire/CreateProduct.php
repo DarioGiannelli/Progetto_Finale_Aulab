@@ -47,7 +47,7 @@ class CreateProduct extends Component
 
         
         Auth::user()->products()->save($product);
-        session()->flash('message', 'Annuncio inserito con successo');
+        session()->flash('message', 'Annuncio inviato in revisione');
         $this->cleanForm();
     }
    
