@@ -24,6 +24,7 @@
                 
                     
                 
+          
               <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
               </li>
@@ -43,10 +44,10 @@
 
              
               @auth
-           
-              <li class="nav-item">
-                  <a href="" class="nav-item nav-link active">Bentornato {{ Auth::user()->name }}</a>
-              </li>
+          
+               <li class="nav-item">
+                  <a href="" class="nav-item nav-link active ">Bentornato {{ Auth::user()->name }}</a>
+              </li> 
              
               <li class="nav-item">
                   <a href="{{ Route('products.create') }}" class="nav-link active">Crea annuncio</a>
@@ -60,7 +61,13 @@
                     </span>
                   </a>
               </li> 
+              <li class="nav-item">
+                  <a href="{{Route('products.dashboard')}}" class="nav-item nav-link active ">Crud</a>
+              </li> 
+
               @endif
+              
+             
               @endauth
             
             
