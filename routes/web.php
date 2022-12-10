@@ -44,3 +44,7 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 
 
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchProducts'])->name('products.search');
+
+Route::get('/products/dashboard',[ProductController::class, 'dashboard'])->name('products.dashboard');
+
+Route::get('/products/{product}/edit',[ProductController::class, 'edit'])->name('products.edit');

@@ -8,7 +8,7 @@
         </div>
     </div>
     
-    <div class="container prodotto mb-5">
+    <div class="container prodotto mb-5 text-dark">
         <div class="row">
             {{-- swiper --}}
             <div class="col-12 col-md-6">
@@ -94,28 +94,38 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6">
-                <div class="description">
-                    <h2 class="h1">{{$product->name}}</h2>
+            <div class="col-12 col-md-6 d-flex flex-column">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="h1 mt-4">{{$product->name}}</h2>
+                            <p class="fs-5 mb-4">{{$product->brand}}</p>
 
-                    <h3>Descrizione</h3>
+                            <h3>Descrizione</h3>
+                            
+                            <p class="mb-4 fs-5">{{$product->description}}</p>
+                            
+                            <h3>Caricato da:</h3>
+                
+                            <p class="mb-4 fs-5">{{$product->user->name}}</p>
+                
+                            <h3>Il:</h3>
+                
+                            <p class="mb-4 fs-5">{{$product->created_at->format('d/m/Y')}}</p>
+                
+                            <h3>Categoria:</h3>
+                
+                            <a href="{{route('categoryShow', $product->category)}}" class="btn btn-primary rounded-pill">{{$product->category->name}}</a>
+                        </div>
+                    </div>
+                    <div class="mt-4 row">
+                        <div class="col-12">
+                            <button class="btn btn-danger rounded-pill">Aggiungi al carrello</button>
+                        </div>
+                    </div>
                     
-                    <p class="mx-3">{{$product->description}}</p>
-                       
-                    <h3>Caricato da:</h3>
-        
-                    <p>{{$product->user->name}}</p>
-        
-                    <h3>Il:</h3>
-        
-                    <p>{{$product->created_at->format('d/m/Y')}}</p>
-        
-                    <h3>Categoria:</h3>
-        
-                    <a href="{{route('categoryShow', $product->category)}}" class="btn btn-primary rounded-pill">Categoria {{$product->category->name}}</a>
                     
                 </div>
-                <button class="btn btn-danger rounded-pill">ADD TO CART</button>
             </div>
 
         </div>
