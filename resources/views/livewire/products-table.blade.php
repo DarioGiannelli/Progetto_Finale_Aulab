@@ -4,14 +4,12 @@
   <thead>
     <tr>
       <th scope="col">id</th>
-      <th scope="col">title</th>
-      <th scope="col">brand</th>
-      <th scope="col">category</th>
-      <th scope="col">description</th>
-      <th scope="col">price</th>
-      <th scope="col"> actions</th>
-
-
+      <th scope="col">Titolo</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">Prezzo</th>
+      <th scope="col">Azioni</th>
     </tr>
   </thead>
   <tbody>
@@ -23,16 +21,11 @@
       <td>{{$product->category->name}}</td>
       <td>{{$product->description}}</td>
       <td>{{$product->price}}</td>
-      <td>
+      <td class='d-flex align-item-center justify-content-center'>
         <button class="btn btn-danger" wire:click="deleteProduct({{$product->id}})"> Elimina</button>
-        <button class="btn btn-success"> Accetta</button>
+        <button class="btn btn-success mx-2"> Accetta</button>
         <a class="btn btn-warning" href="{{route('products.edit', $product)}}"> Modifica</a>
-
-
       </td>
-
-
-
     </tr>
     @endforeach
   

@@ -17,7 +17,8 @@ class Product extends Model
         'name',
         'description',
         'price',
-        'brand',        
+        'brand', 
+        'category'       
     ];
 
     public function toSearchableArray(){
