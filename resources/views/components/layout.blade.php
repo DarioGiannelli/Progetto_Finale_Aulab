@@ -77,6 +77,9 @@
             },
         });
     </script>
+
+
+
     @livewireScripts  
 
 </body>

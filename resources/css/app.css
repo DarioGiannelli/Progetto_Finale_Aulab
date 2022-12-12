@@ -33,6 +33,8 @@
 
 body {
     margin: 0;
+    color: var(--grigioScuro);
+    background: linear-gradient(60deg, var(--bluScuro) 0%, rgb(20, 207, 231) 100%);
   }
 
 .text-yellow{
@@ -45,10 +47,10 @@ body {
     /* background-repeat: no-repeat; */
 }
 
-.lightTheme{
+/* .lightTheme{
     color: var(--grigioScuro);
     background: linear-gradient(60deg, var(--bluScuro) 0%, rgb(20, 207, 231) 100%);
-}
+} */
 
 .christmasTheme{
   background-color: green;
