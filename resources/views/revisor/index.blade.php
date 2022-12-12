@@ -41,10 +41,10 @@
     
                         <h5 class="card-title my-3 text-warning">{{$product_to_check->name}}</h5>
                         <div class="prodottoSingolo">
-                            <p class="card-text my-3 ">Descrizione: {{$product_to_check->description}}</</p>
+                            <p class="card-text my-3 ">Descrizione: {{$product_to_check->description}}</p>
                             <p class="card-text my-3">{{$product_to_check->price}} €</</p>
                             <a href="{{route('categoryShow', $product_to_check->category)}}" class="btn btn-primary">Categoria {{$product_to_check->category->name}}</a>
-                            <p class="card-footer my-3">Pubblicato il:{{$product_to_check->created_at->format('d/m/Y')}}</</p>
+                            <p class="card-footer my-3">Pubblicato il:{{$product_to_check->created_at->format('d/m/Y')}}</p>
                             <form action="{{Route('revisor.accept_product', ['product'=>$product_to_check])}}"method="POST">
                                 @csrf
                                 @method('PATCH')

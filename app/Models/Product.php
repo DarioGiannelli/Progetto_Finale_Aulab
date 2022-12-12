@@ -17,9 +17,10 @@ class Product extends Model
         'name',
         'description',
         'price',
-        'brand',
-        
+        'brand', 
+        'category'       
     ];
+
     public function toSearchableArray(){
         $category = $this->category;
         $array=[
@@ -28,12 +29,8 @@ class Product extends Model
             'description' => $this->description,
             'brand' => $this->brand,
             'category'=>$category
-
         ];
         return $array;
-
-
-
     }
 
 
@@ -58,7 +55,18 @@ class Product extends Model
         return Product::where('is_accepted', null)->count();
     }
 
-   
+    // prova
+    public function getDescriptionSubstring() {
+        if(strlen($this->description) > 50 ){
+            return substr($this->description, 0, 50) . '...';
+        }else{
+            return $this->description;
+        }
+    }
+
+//    public function getFormattedDate() {
+//     return $this->created_at->format('d/m/y');
+//    }
 }
 
 
