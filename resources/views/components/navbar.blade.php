@@ -8,7 +8,7 @@
 
         {{-- TOGGLE DARKMODE --}}
         <button id="box" class="box">
-            <span id="toggle" class="toggle"></span>
+            <span id="toggle" class="toggle toggleLight"></span>
          </button>
 
       <h1 id="titoloNav" class="m-0 text-primary">PRESTO<span class="span">.</span>it</h1>
