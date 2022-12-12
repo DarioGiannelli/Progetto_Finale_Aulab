@@ -25,9 +25,9 @@ christmas.addEventListener('click' , ()=>{
         snowWrapper.innerHTML=`
         <div class="snowflake">
         ❅
-    </div>
+        </div>
 
-    <div class="snowflake">
+        <div class="snowflake">
         ❅
     </div>
 
