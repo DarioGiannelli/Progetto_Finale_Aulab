@@ -41,7 +41,7 @@
                                     <h2 class="title">{{$product->name}}</h2>
                                 </div>
                                 <div class="col-12">
-                                    <span class="caption">{{ substr($product->description, 0, 15) . '...'}}</span>
+                                    <span class="caption">{{$product->getDescriptionSubstring()}}</span>
                                 </div>
                                 <div class="col-12">
                                     <span class="caption">€ {{$product->price}}</span>
