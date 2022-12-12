@@ -31,30 +31,31 @@
     overflow-x: 0;
 }
 
-body {
-    margin: 0;
-    color: var(--grigioScuro);
-    background: linear-gradient(60deg, var(--bluScuro) 0%, rgb(20, 207, 231) 100%);
-  }
 
 .text-yellow{
-    color: var(--giallo);
+  color: var(--giallo);
 }
 
 .darkTheme{
-    background: linear-gradient(60deg, rgb(31, 20, 75) 0%, rgb(8, 73, 48) 100%);
-    color: var(--GhostWhite);
-    /* background-repeat: no-repeat; */
+  background: linear-gradient(60deg, rgb(31, 20, 75) 0%, rgb(8, 73, 48) 100%);
+  color: var(--GhostWhite);
+  /* background-repeat: no-repeat; */
 }
 
 /* .lightTheme{
-    color: var(--grigioScuro);
-    background: linear-gradient(60deg, var(--bluScuro) 0%, rgb(20, 207, 231) 100%);
+  color: var(--grigioScuro);
+  background: linear-gradient(60deg, var(--bluScuro) 0%, rgb(20, 207, 231) 100%);
 } */
 
+
+body {
+  margin: 0;
+  color: var(--grigioScuro);
+  background: linear-gradient(60deg, var(--bluScuro) 0%, rgb(20, 207, 231) 100%);
+}
 .christmasTheme{
-  background-color: green;
-    color: var(--GhostWhite);
+  background: green !important;
+  color: var(--GhostWhite);
 }
 
 /* parallax */
