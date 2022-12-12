@@ -25,3 +25,32 @@ arrow.addEventListener('click' , ()=>{
 
 });
 
+let showPwd1 = document.getElementById('showPwd1');
+let password1 = document.getElementById('password1');
+
+showPwd1.addEventListener('click' , ()=>{
+
+    if(password1.type == 'password'){
+        password1.type = 'text';
+    } else {
+        password1.type = 'password';
+    }
+
+});
+
+let showPwd2 = document.getElementById('showPwd2');
+let password2 = document.getElementById('password2');
+
+showPwd2.addEventListener('click' , ()=>{
+
+    if(password2.type == 'password'){
+        password2.type = 'text';
+    } else {
+        password2.type = 'password';
+    }
+
+});
+
+
+
+
