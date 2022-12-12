@@ -24,6 +24,7 @@ class EditProduct extends Component
             'brand'=> $this->brand,
             'category'=>$this->category
     ]);
+
        
         
     }
