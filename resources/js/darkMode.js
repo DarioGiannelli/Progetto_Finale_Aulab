@@ -28,7 +28,7 @@ box.addEventListener('click' , ()=>{
             <div id="stars4"></div>
         `
 
-        confirm = true;
+            confirm = true;
 
     } else {
 
@@ -44,6 +44,6 @@ box.addEventListener('click' , ()=>{
 
         confirm = false;
 
-    }
+     }
 
-});
+ });
