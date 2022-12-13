@@ -29,8 +29,8 @@
                   <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
               </li>
 
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"><i id="christmas" class="fa-solid fa-gift"></i></a>
+              <li class="nav-item" id="christmas">
+                  <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-gift"></i></a>
               </li>
 
               <li class="nav-item">

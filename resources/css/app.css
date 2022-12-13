@@ -28,7 +28,7 @@
 
 
 *{
-    overflow-x: 0;
+    /* overflow-x: 0; */
     margin: 0;
     padding: 0;
 }
@@ -54,6 +54,7 @@ body {
   margin: 0;
   color: var(--grigioScuro);
   background: linear-gradient(60deg, var(--bluScuro) 0%, rgb(20, 207, 231) 100%);
+  overflow-x: hidden;
 }
 .christmasTheme{
   background: green !important;
