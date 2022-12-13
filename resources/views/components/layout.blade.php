@@ -44,7 +44,8 @@
         
     </div>
 
-    <div id="snowWrapper" class="snowflakes" aria-hidden="true">
+    <div id="snowWrapper">
+
 
     </div>
 
@@ -76,7 +77,14 @@
                 swiper: swiper,
             },
         });
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LLWL5N9CSM');
     </script>
+
+
+
     @livewireScripts  
 
 </body>

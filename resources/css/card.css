@@ -24,7 +24,7 @@
     height: 60px;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 120px;
+    margin-bottom: 150px;
     /* margin per dettagli card */
     margin-left: 10px;
     margin-right: 10px;
@@ -40,6 +40,12 @@
     /* background: #222; */
     transition: 0.5s;
     z-index: 1;
+  }
+  
+  .iconCustom{
+    position: absolute;
+    bottom: -140px;
+    right: 15px;
   }
 
   @media screen and (max-width: 992px) {

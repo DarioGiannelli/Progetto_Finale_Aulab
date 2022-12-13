@@ -27,11 +27,11 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12">
-                <h2 class="display-3 text-center mt-5">Ultimi prodotti:</h2>
+                <h2 class="display-3 text-center mt-5">Ultimi prodotti</h2>
             </div>
             @foreach ($products as $product)
                 <div class="col-12 col-md-4 my-5 d-flex justify-content-center">
-                    <div class="cardCust">
+                    <div class="cardCust position-relative">
                         <div class="imgbox">
                             <div class="imgCust"></div>
                         </div>
@@ -53,7 +53,7 @@
                                     <span class="caption">Pubblicato il: {{$product->created_at->format('d/m/Y')}}</</span>
                                 </div>
                                 <div class="col-12 mt-2">
-                                <a href="{{route('products.show', $product)}}" class="btnCard rounded-pill"><i class="fa-solid text-primary fa-2x fa-circle-info"></i></a> 
+                                <a href="{{route('products.show', $product)}}" class="btnCard rounded-pill"><i class="fa-solid text-primary fa-2x fa-circle-info iconCustom"></i></a> 
                                 </div>
                             </div>
                         </div>

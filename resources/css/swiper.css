@@ -30,11 +30,6 @@
     object-fit: cover;
   }
 
-  /* body {
-    background: #000;
-    color: #000;
-  } */
-
   .swiper {
     width: 100%;
     height: 300px;
@@ -47,6 +42,7 @@
     background-position: center;
   }
 
+  /* altezza larghezza img principale */
   .mySwiper2 {
     height: 80%;
     width: 100%;
