@@ -19,7 +19,7 @@
                          <p class="lead">
                              Non ci sono annunci per questa ricerca
                         </p>
-                    </div>
+                    <div>
                 </div>
             @endforelse
             <div class="col-12 d-flex justify-content-center">
