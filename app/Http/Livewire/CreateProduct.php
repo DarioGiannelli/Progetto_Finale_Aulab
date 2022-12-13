@@ -85,7 +85,7 @@ class CreateProduct extends Component
 
         if(count($this->images)){
             foreach ($this->images as $image){
-                $product->images()->create(['path'=>$image->store('images', 'public')]);
+                // $product->images()->create(['path'=>$image->store('images', 'public')]);
                 $newFileName ="products/{$product->id}";
                 $newImage = $product->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
