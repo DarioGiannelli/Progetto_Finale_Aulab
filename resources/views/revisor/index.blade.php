@@ -25,73 +25,45 @@
                     <div class="col-12">
                         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 rounded-4">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                                </div>
+
+                                @if ($product_to_check->images)
+                                    @foreach ($product_to_check->images as $image)
+                                        <div class="swiper-slide">
+                                            <img src="{{Storage::url($image->path)}}" class="img-fluid rounded-4"/>
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <img src="https://picsum.photos/id/27/300" class="rounded-4"/>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="https://picsum.photos/id/28/300" class="rounded-4"/>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="https://picsum.photos/id/29/300" class="rounded-4"/>
+                                    </div>
+                                @endif
                             </div>
+
+
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
-                            </div>
-                            <div thumbsSlider="" class="swiper mySwiper">
-                            <div class="swiper-wrapper">
+                        </div>
+                        <div thumbsSlider="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        @if ($product_to_check->images)
+                            @foreach ($product_to_check->images as $image)
                                 <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" class=" rounded-4"/>
+                                    <img src="{{Storage::url($image->path)}}" class="img-fluid rounded-4"/>
                                 </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" class=" rounded-4"/>
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" class=" rounded-4"/>
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" class=" rounded-4"/>
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-5.jpg" class=" rounded-4"/>
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-6.jpg" class=" rounded-4"/>
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-7.jpg" class=" rounded-4"/>
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-8.jpg" class=" rounded-4"/>
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-9.jpg" class=" rounded-4"/>
-                                </div>
-                                <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-10.jpg" class=" rounded-4"/>
-                                </div>
-                            </div>
+                            @endforeach
+                        @endif
+                        
+                        </div>
                             </div>
                     </div>
                     <div class="col-12">
