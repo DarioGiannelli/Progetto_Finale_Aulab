@@ -87,9 +87,9 @@
     }
 
     .imgCust {
-      background-image: url('https://picsum.photos/272/156');
       background-repeat: no-repeat;
       background-size: cover;
+      
       
       position: absolute;
       top: 0;
@@ -155,7 +155,6 @@
     }
 
     .imgCust {
-      background-image: url('https://picsum.photos/200/260');
       background-repeat: no-repeat;
       background-size: cover;
       
