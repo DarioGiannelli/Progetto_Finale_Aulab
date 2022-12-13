@@ -30,6 +30,14 @@
               </li>
 
               <li class="nav-item">
+                  <x-_locale lang="it" nation="it"/>
+              </li>
+
+              <li class="nav-item">
+                  <x-_locale lang="en" nation="gb"/>
+              </li>
+
+              <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#"><i id="christmas" class="fa-solid fa-gift"></i></a>
               </li>
 

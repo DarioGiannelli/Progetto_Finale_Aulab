@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RevisorController;
@@ -48,3 +49,5 @@ Route::get('/ricerca/annuncio', [PublicController::class, 'searchProducts'])->na
 Route::get('/products/dashboard',[ProductController::class, 'dashboard'])->name('products.dashboard');
 
 Route::get('/products/{product}/edit',[ProductController::class, 'edit'])->name('products.edit');
+
+Route::post('/lingua/{lang}' , [FrontController::class, 'setLanguage'])->name('set_language_locale');

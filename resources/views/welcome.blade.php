@@ -5,6 +5,8 @@
     </div>
 @endif
 
+<p class="h2 my-2 fw-bold">{{__('ui.allProducts')}}</p>
+
     <x-masthead/>
     <div class="container-fluid">
         <div class="row category">
