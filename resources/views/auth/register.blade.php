@@ -28,8 +28,8 @@
                                         <i class="fa-solid fa-unlock"></i>
                                     </div>
                                     <div class="col-10">
-                                        <input id="password1" class="rounded-pill" type="password" placeholder="password" name='password'/>
-                                        <i id="showPwd1" class="fa-regular fa-eye"></i>
+                                        <input id="inputPassword" class="rounded-pill" type="password" placeholder="password" name='password'/>
+                                        <!-- <input id="showPassword" type="checkbox"> -->
                                     </div>
                                     <div class="col-2 d-flex flex-column justify-content-center">
                                         <i class="fa-solid fa-unlock"></i>

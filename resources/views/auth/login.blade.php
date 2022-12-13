@@ -22,8 +22,7 @@
                                 <i class="fa-solid fa-unlock"></i>
                             </div>
                             <div class="col-10">
-                                <input id="password2" class="rounded-pill" type="password" placeholder="your password" name='password'/>
-                                <i id="showPwd2" class="fa-regular fa-eye"></i>
+                                <input class="rounded-pill" type="password" placeholder="your password" name='password'/>
                             </div>
                         </div>
                    </div>

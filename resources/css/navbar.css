@@ -2,9 +2,10 @@
 
 /* Variabili colori e font */
 
-#titoloNav{
+.titoloNav{
     font-family: var(--fontTitolo);
 }
+
 .span{
     color: var(--Rosso);
     font-weight: bold;
@@ -31,6 +32,14 @@ nav .nav-link:hover , button:hover{
 .linkAuth{
     width: 33px;
     /* height: 35px; */
+
+}
+
+@media screen and(max-width:769px){
+
+    .titoloNav{
+        font-size: 90px !important;
+    }
 
 }
 

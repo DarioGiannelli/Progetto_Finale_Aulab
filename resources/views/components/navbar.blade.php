@@ -11,7 +11,7 @@
             <span id="toggle" class="toggle toggleLight"></span>
          </button>
 
-      <h1 id="titoloNav" class="m-0 text-primary">PRESTO<span class="span">.</span>it</h1>
+      <h1 class="titoloNav m-0 text-primary">PRESTO<span class="span">.</span>it</h1>
       
       <button class="navbar-toggler my-3 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <!-- <span class="navbar-toggler-icon"></span> -->
