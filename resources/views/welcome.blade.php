@@ -5,14 +5,12 @@
     </div>
 @endif
 
-<p class="h2 my-2 fw-bold">{{ __('ui.allProducts') }}</p>
-
     <x-masthead/>
     <div class="container-fluid">
         <div class="row category">
             <div class="col-12">
 
-                <h2 class="text-center display-3 my-5">Le nostre categorie:</h2>
+                <h2 class="text-center display-3 my-5">{{__('ui.ourCategories')}}</h2>
             </div>
             @foreach ($categories as $category)
                 <div class="col-6 col-md-2 text-center d-flex align-items-center justify-content-center my-3">
@@ -29,7 +27,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12">
-                <h2 class="display-3 text-center mt-5">Ultimi prodotti</h2>
+                <h2 class="display-3 text-center mt-5">{{__('ui.lastProducts')}}</h2>
             </div>
             @foreach ($products as $product)
                 <div class="col-12 col-md-4 my-5 d-flex justify-content-center">

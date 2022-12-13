@@ -37,14 +37,14 @@
               </li>
 
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="{{ Route('products.index') }}">Annunci</a>
+                  <a class="nav-link active" aria-current="page" href="{{ Route('products.index') }}">{{__('ui.products')}}</a>
               </li>
              
             @auth
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Bentornato {{ Auth::user()->name }}
+                        {{__('auth.user')}} {{ Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu">
 
@@ -52,7 +52,7 @@
            
                         @if(Auth::user()->is_revisor)
                             <li>
-                                <a href="{{Route('revisor.index')}} " class="dropdown-item" >Zona Revisore 
+                                <a href="{{Route('revisor.index')}} " class="dropdown-item" >{{__('ui.revisor')}}
                                     <span class="badge rounded-pill bg-danger">
                                         {{ App\Models\Product::toBeRevisionedCount()}}
                                         <span class="visually-hidden">unread Messages</span> 
@@ -68,7 +68,7 @@
                 </li>
              
                 <li class="nav-item">
-                    <a href="{{ Route('products.create') }}" class="nav-link active">Crea annuncio</a>
+                    <a href="{{ Route('products.create') }}" class="nav-link active">{{__('ui.product')}}</a>
                 </li>
               
                 
@@ -78,7 +78,7 @@
                 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie prodotti
+                        {{__('ui.categories')}}
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
