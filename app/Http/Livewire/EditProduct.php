@@ -16,11 +16,30 @@ class EditProduct extends Component
     public $brand;
     public $category;
 
-    
+    protected $rules = [
+      'name'=>'required|min:4',
+      'description'=>'required|min:8',
+      'price'=>'required|numeric',
+      'category'=>'required',
+      'brand'=>'required|min:4',
+      
+  ];
+
+  protected $messages = [
+      'required'=>'Il campo è obbligatorio',
+      'min'=>'Sono necessari almeno 4 caratteri',
+      'numeric'=>'L\'importo deve essere un numero',
+      
+  ];
+  public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
 
 
     public function updateProduct(){
-
+       
+        $this->validate();
         $product = Product::find($this->productId);
         $product->update(
           [ 
@@ -40,8 +59,6 @@ class EditProduct extends Component
 
     public function mount($productId ){
         
-
-
         $product = Product::find($productId);
         $this->productId=$product->id;
         $this->name=$product->name;
@@ -49,7 +66,6 @@ class EditProduct extends Component
         $this->price=$product->price;
         $this->brand=$product->brand;
         $this->category=$product->category_id;
-
     }
 
     public function render()

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Models\Image;
 use App\Models\Product;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
@@ -18,7 +19,9 @@ class Product extends Model
         'description',
         'price',
         'brand', 
-        'category'       
+        'category_id',
+        'user_id',
+        
     ];
 
     public function toSearchableArray(){
@@ -28,7 +31,8 @@ class Product extends Model
             'name' => $this->name,
             'description' => $this->description,
             'brand' => $this->brand,
-            'category'=>$category
+            'category'=>$category,
+
         ];
         return $array;
     }
@@ -62,6 +66,10 @@ class Product extends Model
         }else{
             return $this->description;
         }
+    }
+
+    public function images(){
+        return $this->hasMany(Image::class);
     }
 
 //    public function getFormattedDate() {
