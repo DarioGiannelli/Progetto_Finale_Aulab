@@ -10,17 +10,17 @@
         <div class="row align-item-center">
             <div class="col-lg-6 text-lg-start d-flex flex-column align-items-center justify-content-center">
                 <h1 id="titoloMasthead" class="d-flex mb-4 animated slideInDown display-1 mt-5 mt-md-0">PRESTO<span id="spanMasthead" class="span">.</span>it</h1>
-                <p class=" pb-3 animated slideInDown fs-3 text-center">Tutto ciò che vuoi vendere ed acquistare... anche dal divano di casa!</p>
+                <p class=" pb-3 animated slideInDown fs-3 text-center">{{ __('ui.masthead')}}</p>
                 @guest
                     <div>
-                        <a href="{{ Route('login') }}" class="btn blu text-white py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Vendi subito</a>
-                        <a href="{{ Route('login') }}" class="btn verde text-white py-sm-3 px-sm-5 rounded-pill animated slideInRight">Compra... PRESTO!</a>
+                        <a href="{{ Route('login') }}" class="btn blu text-white py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">{{__('ui.vendi')}}</a>
+                        <a href="{{ Route('login') }}" class="btn verde text-white py-sm-3 px-sm-5 rounded-pill animated slideInRight">{{__('ui.compra')}}</a>
                     </div>
                 @endguest
                 @auth
                 <div>
-                    <a href="{{ Route('products.create') }}" class="btn blu text-white py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Vendi subito</a>
-                    <a href="{{ Route('products.index') }}" class="btn verde text-white py-sm-3 px-sm-5 rounded-pill animated slideInRight">Compra... PRESTO!</a>
+                    <a href="{{ Route('products.create') }}" class="btn blu text-white py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">{{__('ui.vendi')}}</a>
+                    <a href="{{ Route('products.index') }}" class="btn verde text-white py-sm-3 px-sm-5 rounded-pill animated slideInRight">{{__('ui.compra')}}</a>
                 </div>
                 @endauth
                 
