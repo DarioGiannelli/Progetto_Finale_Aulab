@@ -24,46 +24,46 @@
                     {{-- swiper --}}
                     <div class="col-12">
                         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 rounded-4">
-                        <div class="swiper-wrapper">
+                            <div class="swiper-wrapper">
 
-                        @if ($product_to_check->images)
-                                @foreach ($product_to_check->images as $image)
-                                <div class="swiper-slide">
-                                <img src="{{Storage::url($image->path)}}" class="img-fluid"/>
-                                </div>
-                                @endforeach
-                            @else
-                                <div class="swiper-wrapper">
+                                @if ($product_to_check->images)
+                                    @foreach ($product_to_check->images as $image)
+                                        <div class="swiper-slide">
+                                            <img src="{{Storage::url($image->path)}}" class="img-fluid rounded-4"/>
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <div class="swiper-wrapper">
 
-                                <div class="swiper-slide">
-                                    <img src="https://picsum.photos/id/27/300" />
-                                </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://picsum.photos/id/27/300" class="rounded-4"/>
+                                    </div>
 
-                                <div class="swiper-slide">
-                                    <img src="https://picsum.photos/id/28/300"/>
-                                </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://picsum.photos/id/28/300" class="rounded-4"/>
+                                    </div>
 
-                                <div class="swiper-slide">
-                                    <img src="https://picsum.photos/id/29/300"/>
-                                </div>
-                            @endif
+                                    <div class="swiper-slide">
+                                        <img src="https://picsum.photos/id/29/300" class="rounded-4"/>
+                                    </div>
+                                @endif
                             </div>
 
 
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
-                            </div>
-                            <div thumbsSlider="" class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                            @if ($product_to_check->images)
-                                @foreach ($product_to_check->images as $image)
+                        </div>
+                        <div thumbsSlider="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        @if ($product_to_check->images)
+                            @foreach ($product_to_check->images as $image)
                                 <div class="swiper-slide">
-                                <img src="{{Storage::url($image->path)}}" class="img-fluid"/>
+                                    <img src="{{Storage::url($image->path)}}" class="img-fluid rounded-4"/>
                                 </div>
-                                @endforeach
-                                @endif
-                            
-                            </div>
+                            @endforeach
+                        @endif
+                        
+                        </div>
                             </div>
                     </div>
                     <div class="col-12">
