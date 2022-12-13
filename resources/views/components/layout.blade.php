@@ -48,15 +48,17 @@
 
 
     </div>
-
+    
     <div class="min-vh-100">
         <x-navbar/>
-
+        
         {{ $slot }}
+
     </div>
-    
+
 
     <x-footer/>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     
     <!-- Initialize Swiper -->

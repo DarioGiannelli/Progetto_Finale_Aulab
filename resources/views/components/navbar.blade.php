@@ -1,7 +1,5 @@
 <!-- NAVBAR-->
 
-
-
 <nav id="navbar" class="navbar navbar-expand-lg bg-light sticky-top">
   <div class="container-fluid">
 
@@ -19,11 +17,8 @@
     </button>
 
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
-                
-                    
-                
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
           
               <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
@@ -37,72 +32,64 @@
                   <x-_locale lang="en" nation="gb"/>
               </li>
 
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"><i id="christmas" class="fa-solid fa-gift"></i></a>
+              <li class="nav-item" id="christmas">
+                  <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-gift"></i></a>
               </li>
 
               <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{{ Route('products.index') }}">Annunci</a>
               </li>
-              {{-- @guest
-                  <li class="nav-item">
-                      <a href="{{ route('register') }}" class="nav-link active">Registrati</a>
-                  </li>  
-              @endguest --}}
-
              
-              @auth
-          
-               <li class="nav-item">
-                  <a href="" class="nav-item nav-link active ">Bentornato {{ Auth::user()->name }}</a>
-              </li> 
-             
-              <li class="nav-item">
-                  <a href="{{ Route('products.create') }}" class="nav-link active">Crea annuncio</a>
-              </li>
-              @if(Auth::user()->is_revisor)
-              <li class="nav-item">
-                  <a href="{{Route('revisor.index')}} " class="nav-item nav-link active">Zona Revisore 
-                    <span class="badge rounded-pill bg-danger">
-                        {{ App\Models\Product::toBeRevisionedCount()}}
-                         <span class="visually-hidden">unread Messages</span> 
-                    </span>
-                  </a>
-              </li> 
-              <li class="nav-item">
-                  <a href="{{Route('products.dashboard')}}" class="nav-item nav-link active ">Crud</a>
-              </li> 
+            @auth
 
-              @endif
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Bentornato {{ Auth::user()->name }}
+                    </a>
+                    <ul class="dropdown-menu">
+
+                            <li><a class="dropdown-item" href="#"></a></li>
+           
+                        @if(Auth::user()->is_revisor)
+                            <li>
+                                <a href="{{Route('revisor.index')}} " class="dropdown-item" >Zona Revisore 
+                                    <span class="badge rounded-pill bg-danger">
+                                        {{ App\Models\Product::toBeRevisionedCount()}}
+                                        <span class="visually-hidden">unread Messages</span> 
+                                    </span>
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="{{Route('products.dashboard')}}" class="dropdown-item">Dashboard</a>
+                            </li> 
+        
+                        @endif
+                    </ul>
+                </li>
+             
+                <li class="nav-item">
+                    <a href="{{ Route('products.create') }}" class="nav-link active">Crea annuncio</a>
+                </li>
               
-             
-              @endauth
-            
-            
-              
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Categorie prodotti
-                  </a>
-                  <ul class="dropdown-menu">
-                      @foreach ($categories as $category)
-                          <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
-                      @endforeach                
-                  </ul>
-              </li>
+                
+            @endauth
+                
+                
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie prodotti
+                    </a>
+                    <ul class="dropdown-menu">
+                        @foreach ($categories as $category)
+                            <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                        @endforeach                
+                    </ul>
+                </li>
 
-              {{-- <li class="nav-item">
-                  <a class="nav-link">Chi Siamo</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link">Contattaci</a>
-              </li> --}}
+        </ul>
 
-          </ul>
-
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            
-            <!-- <div class="btnAuth ms-auto"> -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 
                 <li class="nav-item ms-5 ms-lg-0">
                     <form class="d-flex" method="GET" action="{{route('products.search')}}">
@@ -118,11 +105,6 @@
             <li class="nav-item ms-5 ms-lg-0 d-flex align-items-center">
                 <a href="{{ Route('login') }}" class="verde nav-link text-white btn rounded-pill my-2 py-2 px-4 ms-5 me-3 d-lg-block">Login</a>
             </li>
-
-            {{--<li class="nav-item ms-5 ms-lg-0 d-flex align-items-center">
-                 <a href="{{ Route('register') }}" class="linkAuth giallo nav-link btn rounded-pill my-2 py-2 px-4 me-3 d-lg-block">Registrati</a> 
-                
-            </li>--}}
 
             @endguest
 
