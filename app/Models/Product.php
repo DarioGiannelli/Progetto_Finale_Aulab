@@ -22,6 +22,7 @@ class Product extends Model
         'category_id',
         'user_id',
         
+        
     ];
 
     public function toSearchableArray(){

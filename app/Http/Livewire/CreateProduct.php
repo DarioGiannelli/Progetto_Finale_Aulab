@@ -5,9 +5,11 @@ namespace App\Http\Livewire;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use App\Http\Livewire\CreateProduct;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Validation\Validator;
 
 class CreateProduct extends Component
@@ -73,7 +75,7 @@ class CreateProduct extends Component
         $category = Category::find($this->category);
         $this->validate();
 
-        $product = $category->products()->create([        
+        $product = $category->products()->create([  
             'name'=>$this->name,
             'description'=>$this->description,
             'price'=>$this->price,
@@ -84,7 +86,14 @@ class CreateProduct extends Component
         if(count($this->images)){
             foreach ($this->images as $image){
                 $product->images()->create(['path'=>$image->store('images', 'public')]);
+                $newFileName ="products/{$product->id}";
+                $newImage = $product->images()->create(['path'=>$image->store($newFileName, 'public')]);
+
+
+                dispatch(new ResizeImage($newImage->path, 200,300));
             }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
 
         }
 

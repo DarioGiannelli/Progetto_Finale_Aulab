@@ -33,8 +33,8 @@
                 <div class="col-12 col-md-4 my-5 d-flex justify-content-center">
                     <div class="cardCust position-relative">
                         <div class="imgbox">
-                                <img src="{{!$product->images()->get()->isEmpty() ? Storage::url($product->images()->first()
-                                    ->path): 'https://picsum.photos/seed/picsum/200/300'}}" alt="" srcset="" class="imgCust">
+                                <img src="{{!$product->images()->get()->isEmpty() ?
+                              $product->images()->first()->getUrl(200,300) : 'https://picsum.photos/seed/picsum/200/300'}}" alt="" srcset="" class="imgCust">
 
 
                         </div>
