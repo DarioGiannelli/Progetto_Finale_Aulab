@@ -20,8 +20,7 @@ class UserSeeder extends Seeder
         'name' => 'admin',
         'email' => 'admin@admin.com',
         'password' => Hash::make('12345678'),
-        'role'=> 'admin'
-
+        'is_revisor'=> '1'
         ]
     );
         User::create(
@@ -29,8 +28,34 @@ class UserSeeder extends Seeder
         'name' => 'Dario',
         'email' => 'd@d.com',
         'password' => Hash::make('12345678'),
-        'role'=> 'user'
+        'is_revisor'=> '1'
+        ]
+    );
 
+    User::create(
+        [
+        'name' => 'Angelo',
+        'email' => 'a@a.com',
+        'password' => Hash::make('12345678'),
+        'is_revisor'=> '1'
+        ]
+    );
+
+    User::create(
+        [
+        'name' => 'Massimo',
+        'email' => 'm@m.com',
+        'password' => Hash::make('12345678'),
+        'is_revisor'=> '1'
+        ]
+    );
+
+    User::create(
+        [
+        'name' => 'Pippo',
+        'email' => 'p@p.com',
+        'password' => Hash::make('12345678'),
+        'is_revisor'=> '0'
         ]
     );
             

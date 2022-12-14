@@ -28,7 +28,7 @@
                                     @if ($product->images)
                                         @foreach ($product->images as $image)
                                             <div class="swiper-slide">
-                                                <img src="{{Storage::url($image->path)}}" class="img-fluid"/>
+                                                <img src="{{$image->getUrl(200,300)}}" class="img-fluid"/>
                                             </div>
                                         @endforeach
                                     @else
@@ -57,7 +57,7 @@
                                     @if ($product->images)
                                         @foreach ($product->images as $image)
                                             <div class="swiper-slide">
-                                                <img src="{{Storage::url($image->path)}}" class="img-fluid rounded-4"/>
+                                                <img src="{{$image->getUrl(200,300)}}" class="img-fluid rounded-4"/>
                                             </div>
                                         @endforeach
                                     @endif

@@ -57,7 +57,7 @@
                             @if ($product_to_check->images)
                                 @foreach ($product_to_check->images as $image)
                                 <div class="swiper-slide">
-                                <img src="{{Storage::url($image->path)}}" class="img-fluid"/>
+                                <img src="{{$image->getUrl(200,300)}}" class="img-fluid"/>
                                 </div>
                                 @endforeach
                                 @endif
