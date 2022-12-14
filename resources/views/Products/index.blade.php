@@ -14,7 +14,7 @@
 
                 />
                 @empty
-                <div class="col-12">
+                <div class="col-12 min-vh-100">
                     <div class="alert-warning py-3 shadow">
                          <p class="lead">
                              Non ci sono annunci per questa ricerca

@@ -17,7 +17,7 @@ class Image extends Model
 
         return $this->belongsTo(Product::class);
     }
-    public static function getUrlByFilePath($filePath,$w=null,$h=null){
+    public static function getUrlByFilePath($filePath, $w=null, $h=null){
         if(!$w && !$h){
             return Storage::url($filePath);
         }

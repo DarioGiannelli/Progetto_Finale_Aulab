@@ -17,29 +17,30 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('name_en');
             $table->string('icon');
             $table->timestamps();
         });
 
         $categories = [
-            ['name'=>'Elettronica', 'icon'=>'fa-solid fa-tachograph-digital'],
-            ['name'=>'Sport', 'icon'=>'fa-solid fa-futbol'] , 
-            ['name'=>'Casa', 'icon'=>'fa-solid fa-house'], 
-            ['name'=>'Console e Videogame', 'icon'=>'fa-solid fa-gamepad'], 
-            ['name'=>'Motori', 'icon'=>'fa-solid fa-car-on'],
-            ['name'=>'Fai da te', 'icon'=>'fa-solid fa-image'], 
-            ['name'=>'Abbigliamento', 'icon'=>'fas fa-tshirt'], 
-            ['name'=>'Salute', 'icon'=>'fa-solid fa-pump-medical'], 
-            ['name'=>'Multimedia', 'icon'=>'fa-solid fa-headset'], 
-            ['name'=>'Libri', 'icon'=>'fa-solid fa-book'], 
-            ['name'=>'Infanzia', 'icon'=>'fa-solid fa-baby'], 
-            ['name'=>'Animali', 'icon'=>'fa-solid fa-paw']
+            ['name'=>'Elettronica', 'name_en'=>'Tech', 'icon'=>'fa-solid fa-tachograph-digital'],
+            ['name'=>'Sport', 'name_en'=>'Sport', 'icon'=>'fa-solid fa-futbol'] , 
+            ['name'=>'Casa', 'name_en'=>'Home','icon'=>'fa-solid fa-house'], 
+            ['name'=>'Console e Videogame', 'name_en'=>'Console and Videogames','icon'=>'fa-solid fa-gamepad'], 
+            ['name'=>'Motori', 'name_en'=>'Motors','icon'=>'fa-solid fa-car-on'],
+            ['name'=>'Fai da te', 'name_en'=>'Do-it-yourself', 'icon'=>'fa-solid fa-image'], 
+            ['name'=>'Abbigliamento', 'name_en'=>'Clothing', 'icon'=>'fas fa-tshirt'], 
+            ['name'=>'Salute', 'name_en'=>'Health', 'icon'=>'fa-solid fa-pump-medical'], 
+            ['name'=>'Multimedia', 'name_en'=>'Multimedia', 'icon'=>'fa-solid fa-headset'], 
+            ['name'=>'Libri', 'name_en'=>'Books', 'icon'=>'fa-solid fa-book'], 
+            ['name'=>'Infanzia', 'name_en'=>'Infancy', 'icon'=>'fa-solid fa-baby'], 
+            ['name'=>'Animali', 'name_en'=>'Animals', 'icon'=>'fa-solid fa-paw']
         ];
 
         
         
         foreach ($categories as $category){
-            Category::create([ 'name'=>$category['name'] ,'icon'=>$category['icon'] ]);
+            Category::create([ 'name'=>$category['name'] ,'name_en'=>$category['name_en'], 'icon'=>$category['icon'] ]);
         }  
 
          
