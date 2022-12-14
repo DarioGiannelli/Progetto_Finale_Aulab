@@ -69,11 +69,7 @@
             </div>
 
             <div class="col-12">
-<<<<<<< HEAD
-                <input type="number" placeholder="inserisci il prezzo del prodotto" wire:model="price" class="rounded-pill select @error('price') is-invalid @enderror" value="{{ old('price') }}">
-=======
                 <input type="number" placeholder="{{__('ui.productPrice')}}" wire:model="price" class="rounded-pill form-control @error('price') is-invalid @enderror" value="{{ old('price') }}">
->>>>>>> 145de4950a71dc1f8b1ecbc480d7e7f5966ca93a
                 @error('price')
                     {{$message}}
                 @enderror
