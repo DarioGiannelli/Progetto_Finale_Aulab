@@ -12,6 +12,7 @@ class Image extends Model
     use HasFactory;
 
     protected $fillable = ['path'];
+    protected $casts = ['labels'=>'array'];
 
     Public function product(){
 

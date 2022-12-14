@@ -18,7 +18,7 @@
 <div class="container prodotto mb-5 text-dark">
     <div class="row">
         {{-- swiper --}}
-        <div class="col-12 col-md-6">
+        <div class="col-12">
             <div class="container">
                 <div class="row">
                     {{-- swiper --}}
@@ -29,8 +29,56 @@
                         @if (count($product_to_check->images) > 0)
                                 @foreach ($product_to_check->images as $image)
                                 <div class="swiper-slide">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-6">
                                 <img src="{{$image->getUrl(200,300)}}" />
+
+                                            </div>
+                                            {{-- inizio tags --}}
+
+                                            <div class="col-3">
+                                                <h5>
+                                                 tags
+                                                </h5>
+                                                <div class="p-2">
+                                                    @if($image->labels)
+                                                        @foreach($image->labels as $label)
+                                                             <p class="d-inline">{{$label}},</p>
+                                                         @endforeach
+                                                    @endif
+
+
+                                                </div>
+                                            </div>
+                                            {{-- fine tags --}}
+                                            
+
+                                            {{-- inizio validazione --}}
+                                            <div class="col-3">
+                                                <h4>
+                                                    validazione
+                                                </h4>
+                                                <p>Adult: <span class="{{$image->adult}}"></span> </p>
+                                                <p>Satira: <span class="{{$image->spoof}}"></span> </p>
+                                                <p>Medicina: <span class="{{$image->medical}}"></span> </p>
+                                                <p>Violenza: <span class="{{$image->violence}}"></span> </p>
+                                                <p>Contenuto ammiccante: <span class="{{$image->racy}}"></span> </p>
+
+
+
+
+
+                                            </div>
+                                            {{-- fine validazione --}}
+
+                                        </div>
+
+                                    </div>
                                 </div>
+
+                            
+
                                 @endforeach
                             @else
 
@@ -66,13 +114,13 @@
                             </div>
                     </div>
                     <div class="col-12">
-
+                       
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-12 col-md-6 d-flex flex-column">
+        <div class="col-12 d-flex flex-column">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
