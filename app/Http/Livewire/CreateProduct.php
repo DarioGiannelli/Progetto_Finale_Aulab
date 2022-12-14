@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use App\Http\Livewire\CreateProduct;
@@ -91,10 +92,12 @@ class CreateProduct extends Component
                 $newFileName ="products/{$product->id}";
                 $newImage = $product->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
+                RemoveFaces::withChain([
 
-                dispatch(new ResizeImage($newImage->path, 200,300));
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
-                dispatch(new GoogleVisionLabelImage($newImage->id));
+                    new ResizeImage($newImage->path, 200,300),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
 
             }
 
