@@ -29,7 +29,7 @@
                         @if (count($product_to_check->images) > 0)
                                 @foreach ($product_to_check->images as $image)
                                 <div class="swiper-slide">
-                                <img src="{{Storage::url($image->path)}}" class="img-fluid"/>
+                                <img src="{{$image->getUrl(200,300)}}" />
                                 </div>
                                 @endforeach
                             @else
