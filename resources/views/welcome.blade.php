@@ -12,6 +12,31 @@
 
                 <h2 class="text-center display-3 my-5">{{__('ui.ourCategories')}}</h2>
             </div>
+            {{-- icon --}}
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {{-- <div class="carousel-item active">
+                        <img src="..." class="d-block w-100" alt="...">
+                    </div> --}}
+                    @foreach ($categories as $category)
+                        <div class="carousel-item active">
+                                <a href="{{route('categoryShow', $category)}}" class="btn rounded-pill d-flex align-items-center justify-content-center boxIcon">
+                                    <i class="{{ $category->icon }} fa-3x my-5 text-white categoryIcon"></i>
+                                    {{-- <h3 class="mb-4">{{ $category->name }}</h3> --}}
+                                </a>
+                        </div>
+                    @endforeach
+                </div>
+                {{-- controlli carousel --}}
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             @foreach ($categories as $category)
                 <div class="col-6 col-md-2 text-center d-flex align-items-center justify-content-center my-3">
                     

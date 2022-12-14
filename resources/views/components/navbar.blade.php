@@ -96,7 +96,7 @@
 
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 
-                <li class="nav-item ms-5 ms-lg-0">
+                <li class="ms-5 ms-lg-0">
                     <form class="d-flex" method="GET" action="{{route('products.search')}}">
                         <button type="submit" class="border-0 bg-transparent">
                             <i class="fa-solid fa-magnifying-glass fa-2x me-3"></i>
