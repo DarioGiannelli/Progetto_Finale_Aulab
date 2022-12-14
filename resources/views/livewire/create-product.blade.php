@@ -14,21 +14,21 @@
         <div class="row justify-content-center">
             
             <div class="col-12">
-                <input class="rounded-pill" type="text" wire:model="name"  placeholder="inserisci il nome del tuo prodotto" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}">
+                <input class="rounded-pill" type="text" wire:model="name"  placeholder="{{__('ui.productName')}}" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}">
                 @error('name')
                 {{$message}}
                 @enderror
             </div>
             
             <div class="col-12">
-                <input class="rounded-pill" type="text" placeholder="inserisci il brand del tuo prodotto" wire:model="brand" class="form-control @error('brand') is-invalid @enderror" value="{{ old('brand') }}">
+                <input class="rounded-pill" type="text" placeholder="{{__('ui.productBrand')}}" wire:model="brand" class="form-control @error('brand') is-invalid @enderror" value="{{ old('brand') }}">
                 @error('brand')
                     {{$message}}
                 @enderror
             </div>
 
             <div class="col-12 d-flex justify-content-center">
-                <textarea class="" id="" cols="50" rows="3" placeholder="inserisci la descrizione del tuo prodotto"wire:model="description" class="form-control @error('description') is-invalid @enderror" >{{ old('description') }}</textarea>
+                <textarea class="" id="" cols="50" rows="3" placeholder="{{__('ui.productDescription')}}" wire:model="description" class="form-control @error('description') is-invalid @enderror" >{{ old('description') }}</textarea>
                     
             </div>
             @error('description')
@@ -61,7 +61,7 @@
             <div class="mb-3">
                 
                 <select wire:model.defer="category" id="category" class="form-control select rounded-pill my-2">
-                    <option class="text-dark">Scegli la Categoria</option>
+                    <option class="text-dark">{{__('ui.productCategory')}}</option>
                     @foreach ($categories as $category)
                         <option class="text-dark" value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
@@ -69,7 +69,11 @@
             </div>
 
             <div class="col-12">
+<<<<<<< HEAD
                 <input type="number" placeholder="inserisci il prezzo del prodotto" wire:model="price" class="rounded-pill select @error('price') is-invalid @enderror" value="{{ old('price') }}">
+=======
+                <input type="number" placeholder="{{__('ui.productPrice')}}" wire:model="price" class="rounded-pill form-control @error('price') is-invalid @enderror" value="{{ old('price') }}">
+>>>>>>> 145de4950a71dc1f8b1ecbc480d7e7f5966ca93a
                 @error('price')
                     {{$message}}
                 @enderror
@@ -78,7 +82,7 @@
     
     </div>
 
-    <button type="submit" class="btn-cust blu text-white btnForm btnForm2 rounded-pill">pubblica</button>
+    <button type="submit" class="btn-cust blu text-white btnForm btnForm2 rounded-pill">{{__('ui.publishArticle')}}</button>
 </form>
 
 </div>

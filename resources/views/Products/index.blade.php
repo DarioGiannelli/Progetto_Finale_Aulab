@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h1 class="display-3 text-center mt-5">I nostri annunci!</h1>
+                <h1 class="display-3 text-center mt-5">{{__('ui.ourProducts')}}</h1>
             </div>
         </div>
         <div class="row">

@@ -105,12 +105,12 @@
 
                             <h3>Categoria:</h3>
                 
-                            <a href="{{route('categoryShow', $product->category)}}" class="btn btn-primary rounded-pill">{{$product->category->name}}</a>
+                            <a href="{{route('categoryShow', $product->category)}}" class="btn verde text-white rounded-pill  my-2">{{$product->category->name}}</a>
                         </div>
                     </div>
                     <div class="mt-4 row">
                         <div class="col-12">
-                            <button class="btn btn-danger rounded-pill">Aggiungi al carrello</button>
+                            <button class="btn rosso text-white rounded-pill ">Aggiungi al carrello</button>
                         </div>
                     </div>
                     
