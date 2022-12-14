@@ -18,7 +18,7 @@
 <div class="container prodotto mb-5 text-dark">
     <div class="row">
         {{-- swiper --}}
-        <div class="col-12">
+        <div class="col-12 col-md-7">
             <div class="container">
                 <div class="row">
                     {{-- swiper --}}
@@ -32,8 +32,7 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-6">
-                                <img src="{{$image->getUrl(200,300)}}" />
-
+                                                <img src="{{$image->getUrl(200,300)}}" />
                                             </div>
                                             {{-- inizio tags --}}
 
@@ -65,10 +64,6 @@
                                                 <p>Violenza: <span class="{{$image->violence}}"></span> </p>
                                                 <p>Contenuto ammiccante: <span class="{{$image->racy}}"></span> </p>
 
-
-
-
-
                                             </div>
                                             {{-- fine validazione --}}
 
@@ -79,7 +74,7 @@
 
                             
 
-                                @endforeach
+                            @endforeach
                             @else
 
                                 <div class="swiper-slide">
@@ -105,7 +100,7 @@
                             @if ($product_to_check->images)
                                 @foreach ($product_to_check->images as $image)
                                 <div class="swiper-slide">
-                                <img src="{{$image->getUrl(200,300)}}" class="img-fluid"/>
+                                <img src="{{$image->getUrl(200,300)}}" class="img-fluid rounded-4"/>
                                 </div>
                                 @endforeach
                                 @endif
@@ -120,7 +115,7 @@
             </div>
         </div>
 
-        <div class="col-12 d-flex flex-column">
+        <div class="col-12 col-md-5 d-flex flex-column">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
@@ -130,14 +125,21 @@
                         <h3>Descrizione</h3>
                         
                         <p class="mb-4 fs-5">{{$product_to_check->description}}</p>
-
+                    </div>
+                    <div class="col-6">
                         <h3>Prezzo:</h3>
 
                         <p class="mb-4 fs-5">€ {{$product_to_check->price}}</p>
-                        
+                    </div>
+                    <div class="col-6">
                         <h3>Caricato da:</h3>
-            
+                
                         <p class="mb-4 fs-5">{{$product_to_check->user->name}}</p>
+                    </div>
+
+                        
+                        
+                        
             
                         <h3>Il:</h3>
             
@@ -155,14 +157,14 @@
                     {{-- <div class="col-12">
                         <button class="btn btn-danger rounded-pill">Aggiungi al carrello</button>
                     </div> --}}
-                    <div class="col-2 d-flex justify-content-center">
+                    <div class="col-6 d-flex justify-content-center">
                         <form action="{{Route('revisor.accept_product', ['product'=>$product_to_check])}}"method="POST">
                             @csrf
                             @method('PATCH')
                            <button class="btn btn-success rounded-pill" type="submit">Accetta</button>
                         </form>
                     </div>
-                    <div class="col-2 d-flex justify-content-center">
+                    <div class="col-6 d-flex justify-content-center">
                         <form action="{{Route('revisor.reject_product', ['product'=>$product_to_check])}}"method="POST">
                             @csrf
                             @method('PATCH')
