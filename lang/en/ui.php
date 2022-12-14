@@ -11,5 +11,6 @@ return [
     'compra'=>'Buy...SOON!',
     'ourCategories'=>'Our categories',
     'lastProducts'=>'Last products',
-    'ourAnnouncements'=>'Our announcements!'
+    'categoryName'=>'name_en'
+
 ];

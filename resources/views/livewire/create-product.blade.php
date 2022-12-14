@@ -36,16 +36,17 @@
                     @enderror
 
             <div class="col-12">
-            <input type="file" wire:model="temporary_images" name="images" multiple class="rounded-pill form-control @error('temporary_images.*') is-invalid @enderror" placeholder="img"/>
-            @error('temporary_images.*')
-                {{$message}}
-            @enderror
+                <input type="file" wire:model="temporary_images" name="images" multiple class="rounded-pill @error('temporary_images.*') is-invalid @enderror" placeholder="img"/>
+                @error('temporary_images.*')
+                    {{$message}}
+                @enderror
             </div>
+
             @if (!empty($images))
             <div class="row">
                 <div class="col-12">
                     <p>Photo Preview</p>
-                    <div class="row border border-4 border-info rounded py-4">
+                    <div class="row border border-4 rounded py-4">
                         @foreach ($images as $key => $image)
                         <div class="col-12 my-3">
                             <img src="{{$image->temporaryUrl()}}" alt="" class="img-preview mx-auto rounded img-fluid">
@@ -68,7 +69,7 @@
             </div>
 
             <div class="col-12">
-                <input type="number" placeholder="inserisci il prezzo del prodotto" wire:model="price" class="rounded-pill form-control @error('price') is-invalid @enderror" value="{{ old('price') }}">
+                <input type="number" placeholder="inserisci il prezzo del prodotto" wire:model="price" class="rounded-pill select @error('price') is-invalid @enderror" value="{{ old('price') }}">
                 @error('price')
                     {{$message}}
                 @enderror

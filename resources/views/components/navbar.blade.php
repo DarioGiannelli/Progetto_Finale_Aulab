@@ -74,15 +74,20 @@
                 
             @endauth
                 
-                
-                
+                {{-- @dd(session('locale')) --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{__('ui.categories')}}
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
-                            <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                            <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">
+                                @if(session('locale') == 'en')
+                                    {{ $category->name_en }}
+                                @else
+                                    {{$category->name}}
+                                @endif
+                            </a></li>
                         @endforeach                
                     </ul>
                 </li>

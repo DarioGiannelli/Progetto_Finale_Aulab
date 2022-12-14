@@ -11,6 +11,6 @@ return [
     'compra'=>'Compra...PRESTO!',
     'ourCategories'=>'Le nostre categorie',
     'lastProducts'=>'Ultimi prodotti',
-    'ourAnnouncements'=>'I nostri annunci!'
+    'categoryName'=>'name'
 
 ];
