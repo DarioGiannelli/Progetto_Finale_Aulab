@@ -97,7 +97,7 @@
                             <i class="fa-solid fa-magnifying-glass fa-2x me-3"></i>
                         </button>
                         
-                        <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search" name="searched">
+                        <input class="form-control me-2 rounded-pill" type="search" placeholder="{{__('ui.search')}}" aria-label="Search" name="searched">
                     </form>
                 </li>
             @guest

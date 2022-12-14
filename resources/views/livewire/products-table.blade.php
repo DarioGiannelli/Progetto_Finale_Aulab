@@ -1,6 +1,6 @@
 <div>
 
-<table class="table my-5 table-striped">
+<table class="table my-5 table-striped text-white">
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -22,9 +22,9 @@
       <td>{{$product->description}}</td>
       <td>{{$product->price}}</td>
       <td class='d-flex align-item-center justify-content-center'>
-        <button class="btn btn-danger" wire:click="deleteProduct({{$product->id}})"> Elimina</button>
-        <button class="btn btn-success mx-2"> Accetta</button>
-        <a class="btn btn-warning" href="{{route('products.edit', $product)}}"> Modifica</a>
+        <button class="btn btn-danger" wire:click="deleteProduct({{$product->id}})">{{__('auth.delete')}}</button>
+        <button class="btn btn-success mx-2">{{__('auth.accept')}}</button>
+        <a class="btn btn-warning" href="{{route('products.edit', $product)}}">{{__('auth.update')}}</a>
       </td>
     </tr>
     @endforeach

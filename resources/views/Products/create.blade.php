@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="row create-form">
                        <div class="col-12 col-md-9 text-center">
-                            <h1 class="h1-cust">Crea nuovo annuncio</h1>
+                            <h1 class="h1-cust">{{__('ui.createArticle')}}</h1>
                         </div>
                         <div class="col-12 col-md-3 d-flex justify-content-center my-3 order-md-first">
                             <i class="fa-solid fa-cart-plus text-white fa-3x d-flex flex-column justify-content-center"></i>
