@@ -32,6 +32,7 @@ return [
     'whenShow'=>'At',
     'publishAt'=>'Publish at',
     'priceShow'=>'Price',
-    'selectedProduct'=>'Picked product'
+    'selectedProduct'=>'Picked product',
+    'relatedProduct'=>'Related products'
 
 ];

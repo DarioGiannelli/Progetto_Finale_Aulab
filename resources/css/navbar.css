@@ -3,7 +3,7 @@
 /* Variabili colori e font */
 
 .titoloNav{
-    font-family: var(--fontTitolo);
+    font-family: "Poppins", sans-serif;
 }
 
 .span{

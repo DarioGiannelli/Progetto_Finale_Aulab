@@ -32,5 +32,6 @@ return [
     'whenShow'=>'Il',
     'publishAt'=>'Pubblicato il',
     'priceShow'=>'Prezzo',
-    'selectedProduct'=>'Prodotto selezionato'
+    'selectedProduct'=>'Prodotto selezionato',
+    'relatedProduct'=>'Prodotti correlati'
 ];

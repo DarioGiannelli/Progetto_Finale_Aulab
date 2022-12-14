@@ -19,4 +19,13 @@
     border-radius: 25px;
   }
   
-  
+  .relatedDiv{
+    min-width: 200px;
+    min-height: 230px;
+    background-color: var(--GhostWhite);
+  }
+
+  .relatedImg{
+    /* max-width: 100px; */
+    max-height: 150px;
+  }

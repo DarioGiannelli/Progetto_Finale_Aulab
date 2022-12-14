@@ -57,7 +57,8 @@ class ProductController extends Controller
 
     public function showProduct(Product $product)
     {
-        return view('products.show', compact('product'));
+        $relatedProducts = $product->category->products->except($product->id)->take(3);
+        return view('products.show', compact('product', 'relatedProducts'));
     }
 
     /**
