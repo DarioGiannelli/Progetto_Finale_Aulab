@@ -11,9 +11,30 @@
             <div class="col-12">
 
                 <h2 class="text-center display-3 my-5">{{__('ui.ourCategories')}}</h2>
+
+                <div class="swiper mySwiper d-sm-block d-md-none">
+                    <div class="swiper-wrapper">
+                        @foreach ($categories as $category)
+                            <div class="swiper-slide">
+                                <a href="{{route('categoryShow', $category)}}" class="btn rounded-pill d-flex align-items-center justify-content-center boxIcon">
+                                    <i class="{{ $category->icon }} fa-3x my-5 text-white categoryIcon"></i>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                    <div class="swiper-pagination mt-2"></div>
+                    {{-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> --}}
+                </div>
+
             </div>
+            {{-- icon --}}
+
+   
+
+
             @foreach ($categories as $category)
-                <div class="col-6 col-md-2 text-center d-flex align-items-center justify-content-center my-3">
+                <div class="col-6 col-md-2 text-center d-flex align-items-center justify-content-center my-3 d-none d-md-block">
                     
                         <a href="{{route('categoryShow', $category)}}" class="btn rounded-pill d-flex align-items-center justify-content-center boxIcon">
                             <i class="{{ $category->icon }} fa-3x my-5 text-white categoryIcon"></i>
