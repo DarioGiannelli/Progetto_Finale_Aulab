@@ -74,15 +74,20 @@
                 
             @endauth
                 
-                
-                
+                {{-- @dd(session('locale')) --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{__('ui.categories')}}
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
-                            <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                            <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">
+                                @if(session('locale') == 'en')
+                                    {{ $category->name_en }}
+                                @else
+                                    {{$category->name}}
+                                @endif
+                            </a></li>
                         @endforeach                
                     </ul>
                 </li>
@@ -97,7 +102,7 @@
                             <i class="fa-solid fa-magnifying-glass fa-2x me-3"></i>
                         </button>
                         
-                        <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search" name="searched">
+                        <input class="form-control me-2 rounded-pill" type="search" placeholder="{{__('ui.search')}}" aria-label="Search" name="searched">
                     </form>
                 </li>
             @guest

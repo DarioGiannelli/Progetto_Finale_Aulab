@@ -29,8 +29,8 @@
             
                     <button class="btnLogin text-white rounded-pill" type="submit">Login</button>
                     <div class="forgot-signup">
-                        <a href="#" class="signup">Forgot password?</a>
-                        <a href="{{ Route('register') }}" class="signup">Registrati</a>
+                        <a href="#" class="signup">{{__('auth.forgotPwd')}}</a>
+                        <a href="{{ Route('register') }}" class="signup">{{__('auth.register')}}</a>
                     </div>
                 </form>
             </div>
