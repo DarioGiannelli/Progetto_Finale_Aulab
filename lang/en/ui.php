@@ -23,5 +23,15 @@ return [
     'productCategory'=>'choose the cetegory',
     'productPrice'=>'insert the price for your article',
     'publishArticle'=>'publish',
-    'createArticle'=>'Create new article'
+    'createArticle'=>'Create new article',
+    'category'=>'Category',
+    'cardCategory'=>'name_en',
+    'cartShow'=>'Add to cart',
+    'descriptionShow'=>'Description',
+    'uploadedShow'=>'Uploaded by',
+    'whenShow'=>'At',
+    'publishAt'=>'Publish at',
+    'priceShow'=>'Price',
+    'selectedProduct'=>'Picked product'
+
 ];

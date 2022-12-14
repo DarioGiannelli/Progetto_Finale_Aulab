@@ -3,7 +3,7 @@
     <div class="container-fluid my-4 mt-5">
         <div class="row">
             <div class="col-12">
-                <h1>Prodotto selezionato</h1>
+                <h1>{{__('ui.selectedProduct')}}</h1>
             </div>
         </div>
     </div>
@@ -81,19 +81,19 @@
                                     <h2 class="h1 mt-4">{{$product->name}}</h2>
                                     <p class="fs-5 mb-4">{{$product->brand}}</p>
 
-                                    <h3>Descrizione</h3>
+                                    <h3>{{__('ui.descriptionShow')}}</h3>
                                     
                                     <p class="mb-4 fs-5">{{$product->description}}</p>
                                     
-                                    <h3>Prezzo:</h3>
+                                    <h3>{{__('ui.priceShow')}}:</h3>
 
                                     <p class="mb-4 fs-5">€ {{$product->price}}</p>
                                 </div>
                                 <div class="col-6">
-                                    <h3>Caricato da:</h3>
+                                    <h3>{{__('ui.uploadedShow')}}:</h3>
                                 </div>
                                 <div class="col-6">
-                                    <h3>Il:</h3>
+                                    <h3>{{__('ui.whenShow')}}:</h3>
                                 </div>
                                 <div class="col-6">
                                     <p class="mb-4 fs-5">{{$product->user->name}}</p>
@@ -103,14 +103,21 @@
                                 </div>
                             </div>
 
-                            <h3>Categoria:</h3>
+                            <h3>{{__('ui.category')}}:</h3>
                 
-                            <a href="{{route('categoryShow', $product->category)}}" class="btn verde text-white rounded-pill  my-2">{{$product->category->name}}</a>
+                            <a href="{{route('categoryShow', $product->category)}}" class="btn verde text-white rounded-pill  my-2">
+                                @if(session('locale') == 'en')
+                                    {{$product->category->name_en}}
+                                @else
+                                    {{$product->category->name}}
+                                @endif
+
+                            </a>
                         </div>
                     </div>
                     <div class="mt-4 row">
                         <div class="col-12">
-                            <button class="btn rosso text-white rounded-pill ">Aggiungi al carrello</button>
+                            <button class="btn rosso text-white rounded-pill ">{{__('ui.cartShow')}}</button>
                         </div>
                     </div>
                     

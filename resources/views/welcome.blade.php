@@ -50,10 +50,16 @@
                                     <span class="caption">€ {{$product->price}}</span>
                                 </div>
                                 <div class="col-12">
-                                    <a href="{{route('categoryShow', $product->category)}}" class="caption">Categoria: {{$product->category->name}}</a>
+                                    <a href="{{route('categoryShow', $product->category)}}" class="caption">{{__('ui.category')}}:
+                                    @if(session('locale') == 'en')
+                                        {{ $product->category->name_en }}
+                                    @else
+                                        {{ $product->category->name}}
+                                    @endif
+                                    </a>
                                 </div>
                                 <div class="col-12">
-                                    <span class="caption">Pubblicato il: {{$product->created_at->format('d/m/Y')}}</</span>
+                                    <span class="caption">{{__('ui.publishAt')}}: {{$product->created_at->format('d/m/Y')}}</</span>
                                 </div>
                                 <div class="col-12 mt-2">
                                 <a href="{{route('products.show', $product)}}" class="btnCard rounded-pill"><i class="fa-solid text-primary fa-2x fa-circle-info iconCustom"></i></a> 

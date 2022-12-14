@@ -18,10 +18,23 @@
                   <span class="caption">€ {{$product->price}}</span>
               </div>
               {{-- <div class="col-12">
-                  <a href="{{route('categoryShow', $product->category)}}" class="caption">Categoria: {{$product->category->name}}</a>
+                  <a href="{{route('categoryShow', $product->category)}}" class="caption"> {{__('ui.category')}}: 
+                @if(session('locale') == 'en')
+                    {{ $category->name_en }}
+                @else
+                    {{$category->name}}
+                @endif
+                  </a>
               </div> --}}
                 <div class="col-12">
-                    <a href="{{route('categoryShow', $product->category)}}" class="caption"><i class="{{ $product->category->icon }} text-white categoryIcon"></i> {{$product->category->name}} - il: {{$product->created_at->format('d/m/Y')}}</a>
+                    <a href="{{route('categoryShow', $product->category)}}" class="caption">
+                        <i class="{{ $product->category->icon }} text-white categoryIcon"></i> 
+                        @if(session('locale') == 'en')
+                            {{ $product->category->name_en }}
+                        @else
+                            {{ $product->category->name}}
+                        @endif - 
+                        {{__('ui.whenShow')}}: {{$product->created_at->format('d/m/Y')}}</a>
                 </div>
               <div class="col-12">
                   <span class="caption">Autore: {{$product->user->name ?? ''}}</span>

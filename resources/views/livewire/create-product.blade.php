@@ -50,7 +50,7 @@
                         @foreach ($images as $key => $image)
                         <div class="col-12 my-3">
                             <img src="{{$image->temporaryUrl()}}" alt="" class="img-preview mx-auto rounded img-fluid">
-                            <button type="button" class="btn btn-danger d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                            <button type="button" class="btn btn-danger d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('auth.delete')}}</button>
                         </div> 
                         @endforeach 
                     </div>   

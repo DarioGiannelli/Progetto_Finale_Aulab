@@ -23,5 +23,14 @@ return [
     'productCategory'=>'scegli la categoria',
     'productPrice'=>'inserisci il prezzo del prodotto',
     'publishArticle'=>'pubblica',
-    'createArticle'=>'Crea nuovo annuncio'
+    'createArticle'=>'Crea nuovo annuncio',
+    'category'=>'Categoria',
+    'cardCategory'=>'name',
+    'cartShow'=>'Aggiungi al carrello',
+    'descriptionShow'=>'Descrizione',
+    'uploadedShow'=>'Caricato da',
+    'whenShow'=>'Il',
+    'publishAt'=>'Pubblicato il',
+    'priceShow'=>'Prezzo',
+    'selectedProduct'=>'Prodotto selezionato'
 ];
