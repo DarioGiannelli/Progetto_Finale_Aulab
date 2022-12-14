@@ -10,5 +10,6 @@ return [
     'vendi'=>'Sell now',
     'compra'=>'Buy...SOON!',
     'ourCategories'=>'Our categories',
-    'lastProducts'=>'Last products'
+    'lastProducts'=>'Last products',
+    'ourAnnouncements'=>'Our announcements!'
 ];

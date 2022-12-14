@@ -44,7 +44,7 @@
             @if (!empty($images))
             <div class="row">
                 <div class="col-12">
-                    <p>Phiga Preview</p>
+                    <p>Photo Preview</p>
                     <div class="row border border-4 border-info rounded py-4">
                         @foreach ($images as $key => $image)
                         <div class="col-12 my-3">

@@ -10,5 +10,7 @@ return [
     'vendi'=>'Vendi subito',
     'compra'=>'Compra...PRESTO!',
     'ourCategories'=>'Le nostre categorie',
-    'lastProducts'=>'Ultimi prodotti'
+    'lastProducts'=>'Ultimi prodotti',
+    'ourAnnouncements'=>'I nostri annunci!'
+
 ];
