@@ -68,7 +68,12 @@
             slidesPerView: 4,
             freeMode: true,
             watchSlidesProgress: true,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
         });
+
         var swiper2 = new Swiper(".mySwiper2", {
             spaceBetween: 10,
             navigation: {
@@ -79,6 +84,7 @@
                 swiper: swiper,
             },
         });
+
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
