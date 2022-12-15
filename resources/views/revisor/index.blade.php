@@ -147,30 +147,31 @@
             
                         <h3>Categoria:</h3>
             
-                        <a href="{{route('categoryShow', $product_to_check->category)}}" class="btn btn-primary rounded-pill">{{$product_to_check->category->name}}</a>
+                        <a href="{{route('categoryShow', $product_to_check->category)}}" class="btn btn-primary rounded-pill btnCat">{{$product_to_check->category->name}}</a>
                     </div>
                 </div>
                 <div class="mt-4 row">
                     <div class="col-12">
                         <h4>Revisione:</h4>
                     </div>
-                    {{-- <div class="col-12">
-                        <button class="btn btn-danger rounded-pill">Aggiungi al carrello</button>
-                    </div> --}}
-                    <div class="col-6 d-flex justify-content-center">
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
                         <form action="{{Route('revisor.accept_product', ['product'=>$product_to_check])}}"method="POST">
                             @csrf
                             @method('PATCH')
                            <button class="btn btn-success rounded-pill" type="submit">Accetta</button>
                         </form>
                     </div>
-                    <div class="col-6 d-flex justify-content-center">
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
                         <form action="{{Route('revisor.reject_product', ['product'=>$product_to_check])}}"method="POST">
                             @csrf
                             @method('PATCH')
                            <button class="btn btn-warning rounded-pill" type="submit">Rifiuta</button>
                         </form>
                     </div>
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                        <a href="{{Route('products.dashboard')}}" class="btn btn-info rounded-pill btnCat">Dashboard</a>
+                    </div>
+                </div>
                 </div>
                 
                 

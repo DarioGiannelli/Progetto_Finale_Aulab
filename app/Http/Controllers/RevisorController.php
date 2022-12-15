@@ -47,6 +47,7 @@ class RevisorController extends Controller
     public function reviseSingleProduct(Product $product){
 
         return view('revisor.index', ['product_to_check'=>$product]);
+        return redirect()->back();
 
 
     }
