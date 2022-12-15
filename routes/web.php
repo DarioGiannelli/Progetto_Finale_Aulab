@@ -56,3 +56,4 @@ Route::get('/revisiona-prodotto/{product}', [RevisorController::class, 'reviseSi
 
 
 
+// Route::get('/about' , [PublicController::class, 'about'])->name('about');

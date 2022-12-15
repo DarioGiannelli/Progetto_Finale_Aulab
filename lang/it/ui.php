@@ -33,5 +33,12 @@ return [
     'publishAt'=>'Pubblicato il',
     'priceShow'=>'Prezzo',
     'selectedProduct'=>'Prodotto selezionato',
-    'relatedProduct'=>'Prodotti correlati'
+    'relatedProduct'=>'Prodotti correlati',
+    'categoryProducts'=> 'Annunci per la categoria',
+    'noProducts'=>'Non sono presenti annunci per questa categoria',
+    'publishArticle'=>'pubblicane uno',
+    'productToReview'=>'Prodotto da revisionare',
+    'noProductToReview'=>'Nessun prodotto da revisionare',
+    'review'=>'Revisione'
+    
 ];
