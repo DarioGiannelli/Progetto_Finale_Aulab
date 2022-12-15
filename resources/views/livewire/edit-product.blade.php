@@ -38,9 +38,14 @@
                     @endforeach
                 </select>            
             </div>
+
+
             
             {{--IMG
-                
+                <div class="col-12">
+                <input  type="image" wire:model="image" class="form-control rounded-pill">
+               
+            </div>
                 
 
             <div class="row">

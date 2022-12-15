@@ -15,6 +15,9 @@ class EditProduct extends Component
     public $price;
     public $brand;
     public $category;
+    
+
+    
 
     protected $rules = [
       'name'=>'required|min:4',
@@ -47,7 +50,8 @@ class EditProduct extends Component
             'description'=> $this->description,
             'price'=> $this->price,
             'brand'=> $this->brand,
-            'category_id'=>$this->category
+            'category_id'=>$this->category,
+            'image'=>$this->image
           ]);
 
        
