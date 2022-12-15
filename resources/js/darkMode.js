@@ -41,7 +41,7 @@ if (localStorage.getItem('theme') == null) {
 
         
 
-        toggle.style.transform = "translate(-30px)";
+        toggle.style.transform = "translate(-12px)";
 
         toggle.classList.add('toggleDark');
         toggle.classList.remove('toggleLight');
@@ -136,7 +136,7 @@ box.addEventListener('click' , ()=>{
            spanMasthead.classList.add('testoBianco');
         }
 
-        toggle.style.transform = "translate(-30px)";
+        toggle.style.transform = "translate(-12px)";
 
         toggle.classList.add('toggleDark');
         toggle.classList.remove('toggleLight');
