@@ -94,7 +94,10 @@ class CreateProduct extends Component
 
                 RemoveFaces::withChain([
 
-                    new ResizeImage($newImage->path, 200,300),
+                    new ResizeImage($newImage->path, 400,500),
+                    new ResizeImage($newImage->path, 500,500),
+                    new ResizeImage($newImage->path, 500,400),
+
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);
