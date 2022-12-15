@@ -102,7 +102,7 @@ box.addEventListener('click' , ()=>{
 
         localStorage.setItem('theme', 'darkStars');
 
-        toggle.style.transform = "translate(-30px)";
+        toggle.style.transform = "translate(-12px)";
 
         toggle.classList.add('toggleDark');
         toggle.classList.remove('toggleLight');
