@@ -22,10 +22,10 @@ if (localStorage.getItem('theme') == null) {
 
         body.classList.remove('christmasTheme');
 
-        (titoloMasthead) ? titoloMasthead.classList.add('testoRosso') : console.log('');
+        (titoloMasthead) ? titoloMasthead.classList.remove('testoRosso') : console.log('');
          
         if (spanMasthead){
-           spanMasthead.classList.remove('span');
+           spanMasthead.classList.add('span');
            spanMasthead.classList.add('testoBianco');
         }
 
@@ -249,10 +249,10 @@ box.addEventListener('click' , ()=>{
 
         body.classList.remove('christmasTheme');
 
-        (titoloMasthead) ? titoloMasthead.classList.add('testoRosso') : console.log('');
+        (titoloMasthead) ? titoloMasthead.classList.remove('testoRosso') : console.log('');
          
         if (spanMasthead){
-           spanMasthead.classList.remove('span');
+           spanMasthead.classList.add('span');
            spanMasthead.classList.add('testoBianco');
         }
 
