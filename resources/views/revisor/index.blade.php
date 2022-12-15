@@ -7,8 +7,26 @@
                 {{ session('message') }}
             </div>
         @endif
+
+        <!-- se c'è almeno un prodotto da revisionare me li mostra, altrimenti no -->
+
         <div class="col-12 my-4">
-            <h1> {{$product_to_check ? 'Annuncio da revisionare' : 'Nessun annuncio da revisionare.'}}</h1>
+            <h1> 
+                @if(session('locale') == 'en')
+                    @if($product_to_check == true)
+                        {{__('ui.productToReview')}}
+                    @else
+                        {{__('ui.noProductToReview')}}
+                    @endif
+
+                @else
+                    @if($product_to_check == true)
+                        {{__('ui.productToReview')}}
+                    @else
+                        {{__('ui.noProductToReview')}}
+                    @endif
+                @endif
+            </h1>
         </div>
     </div>
 </div>
@@ -122,17 +140,17 @@
                         <h2 class="h1 mt-4">{{$product_to_check->name}}</h2>
                         <p class="fs-5 mb-4">{{$product_to_check->brand}}</p>
 
-                        <h3>Descrizione</h3>
+                        <h3>{{__('ui.descriptionShow')}}</h3>
                         
                         <p class="mb-4 fs-5">{{$product_to_check->description}}</p>
                     </div>
                     <div class="col-6">
-                        <h3>Prezzo:</h3>
+                        <h3>{{__('ui.priceShow')}}:</h3>
 
                         <p class="mb-4 fs-5">€ {{$product_to_check->price}}</p>
                     </div>
                     <div class="col-6">
-                        <h3>Caricato da:</h3>
+                        <h3>{{__('ui.uploadedShow')}}:</h3>
                 
                         <p class="mb-4 fs-5">{{$product_to_check->user->name}}</p>
                     </div>
@@ -141,36 +159,43 @@
                         
                         
             
-                        <h3>Il:</h3>
+                        <h3>{{__('ui.whenShow')}}:</h3>
             
                         <p class="mb-4 fs-5">{{$product_to_check->created_at->format('d/m/Y')}}</p>
             
-                        <h3>Categoria:</h3>
+                        <h3>{{__('ui.category')}}:</h3>
             
-                        <a href="{{route('categoryShow', $product_to_check->category)}}" class="btn btn-primary rounded-pill">{{$product_to_check->category->name}}</a>
+                        <a href="{{route('categoryShow', $product_to_check->category)}}" class="btn verde text-white rounded-pill btnCat">
+                        @if(session('locale') == 'en')
+                            {{ $product_to_check->category->name_en }}
+                        @else
+                            {{ $product_to_check->category->name }}
+                        @endif
+                        </a>
                     </div>
                 </div>
                 <div class="mt-4 row">
                     <div class="col-12">
-                        <h4>Revisione:</h4>
+                        <h4 class="ms-3">{{__('ui.review')}}:</h4>
                     </div>
-                    {{-- <div class="col-12">
-                        <button class="btn btn-danger rounded-pill">Aggiungi al carrello</button>
-                    </div> --}}
-                    <div class="col-6 d-flex justify-content-center">
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
                         <form action="{{Route('revisor.accept_product', ['product'=>$product_to_check])}}"method="POST">
                             @csrf
                             @method('PATCH')
-                           <button class="btn btn-success rounded-pill" type="submit">Accetta</button>
+                           <button class="btn verde text-white rounded-pill" type="submit">{{__('auth.accept')}}</button>
                         </form>
                     </div>
-                    <div class="col-6 d-flex justify-content-center">
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
                         <form action="{{Route('revisor.reject_product', ['product'=>$product_to_check])}}"method="POST">
                             @csrf
                             @method('PATCH')
-                           <button class="btn btn-warning rounded-pill" type="submit">Rifiuta</button>
+                           <button class="btn rosso text-white rounded-pill" type="submit">{{__('auth.delete')}}</button>
                         </form>
                     </div>
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                        <a href="{{Route('products.dashboard')}}" class="btn btn-info rounded-pill btnCat">Dashboard</a>
+                    </div>
+                </div>
                 </div>
                 
                 

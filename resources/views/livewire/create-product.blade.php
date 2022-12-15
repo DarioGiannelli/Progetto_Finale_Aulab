@@ -59,18 +59,18 @@
                     <option class="text-dark">{{__('ui.productCategory')}}</option>
                     @foreach ($categories as $category)
                         <option class="text-dark" value="{{$category->id}}">
-                            @if(session('locale') == 'en')
-                                {{ $category->name_en }}
-                            @else
-                                {{$category->name}}
-                            @endif
+                        @if(session('locale') == 'en')
+                            {{ $category->name_en }}
+                        @else
+                            {{ $category->name }}
+                        @endif
                         </option>
                     @endforeach
                 </select>            
             </div>
 
             <div class="col-12">
-                <input type="number" step="any" placeholder="{{__('ui.productPrice')}}" wire:model="price" class="rounded-pill @error('price') is-invalid @enderror" value="{{ old('price') }}">
+                <input type="number" placeholder="{{__('ui.productPrice')}}" wire:model="price" step="any" class="rounded-pill @error('price') is-invalid @enderror" value="{{ old('price') }}">
                 @error('price')
                     {{$message}}
                 @enderror
