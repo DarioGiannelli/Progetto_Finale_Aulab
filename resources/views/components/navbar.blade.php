@@ -42,30 +42,30 @@
              
             @auth
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{__('auth.user')}} {{ Auth::user()->name }}
-                    </a>
-                    <ul class="dropdown-menu">
+            {{-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{__('auth.user')}} {{ Auth::user()->name }}
+                </a>
+                <ul class="dropdown-menu">
 
-                            <li><a class="dropdown-item" href="#"></a></li>
-           
-                        @if(Auth::user()->is_revisor)
-                            <li>
-                                <a href="{{Route('revisor.index')}} " class="dropdown-item" >{{__('ui.revisor')}}
-                                    <span class="badge rounded-pill bg-danger">
-                                        {{ App\Models\Product::toBeRevisionedCount()}}
-                                        <span class="visually-hidden">unread Messages</span> 
-                                    </span>
-                                </a>
-                            </li> 
-                            <li>
-                                <a href="{{Route('products.dashboard')}}" class="dropdown-item">Dashboard</a>
-                            </li> 
-        
-                        @endif
-                    </ul>
-                </li>
+                        <li><a class="dropdown-item" href="#"></a></li>
+       
+                    @if(Auth::user()->is_revisor)
+                        <li>
+                            <a href="{{Route('revisor.index')}} " class="dropdown-item" >{{__('ui.revisor')}}
+                                <span class="badge rounded-pill bg-danger">
+                                    {{ App\Models\Product::toBeRevisionedCount()}}
+                                    <span class="visually-hidden">unread Messages</span> 
+                                </span>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="{{Route('products.dashboard')}}" class="dropdown-item">Dashboard</a>
+                        </li> 
+    
+                    @endif
+                </ul>
+            </li> --}}
              
                 <li class="nav-item">
                     <a href="{{ Route('products.create') }}" class="nav-link active">{{__('ui.product')}}</a>
@@ -105,6 +105,41 @@
                         <input class="form-control me-2 rounded-pill" type="search" placeholder="{{__('ui.search')}}" aria-label="Search" name="searched">
                     </form>
                 </li>
+            @auth
+            <li class="nav-item dropdown d-flex align-items-center ms-5 ms-md-2">
+                @if(!Auth::user()->is_revisor)
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{__('auth.user')}} <strong>{{ Auth::user()->name }}</strong>
+                    </a>
+                @endif
+
+                @if(Auth::user()->is_revisor)
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{__('auth.user')}} <strong>{{ Auth::user()->name }}</strong>
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                            <li><a class="dropdown-item" href="#"></a></li>
+        
+                    
+                            <li>
+                                <a href="{{Route('revisor.index')}} " class="dropdown-item" >{{__('ui.revisor')}}
+                                    <span class="badge rounded-pill bg-danger">
+                                        {{ App\Models\Product::toBeRevisionedCount()}}
+                                        <span class="visually-hidden">unread Messages</span> 
+                                    </span>
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="{{Route('products.dashboard')}}" class="dropdown-item">Dashboard</a>
+                            </li> 
+        
+                    </ul>
+                @endif
+            </li>
+            @endauth
+            
             @guest
 
             <li class="nav-item ms-5 ms-lg-0 d-flex align-items-center">
@@ -114,7 +149,7 @@
             @endguest
 
             @auth
-
+            {{-- logout --}}
             <li class="nav-item ms-5 ms-lg-0 d-flex align-items-center">
                 <form action="{{ route('logout') }}" method="POST">
                 @csrf
@@ -126,7 +161,7 @@
             @endauth
             
               
-            <!-- </div> -->
+          
             
             
         </ul>

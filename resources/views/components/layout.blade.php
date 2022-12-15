@@ -34,7 +34,7 @@
     @livewireStyles
 
     @vite(['resources/css/app.css','resources/js/app.js'])
-    <title>Document</title>
+    <title>Presto.it</title>
 </head>
 
 

@@ -22,10 +22,10 @@
                             </div>
                         @endforeach
                     </div>
-                    <div class="swiper-pagination mt-2"></div>
                     {{-- <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div> --}}
                 </div>
+                <div class="swiper-pagination mt-2 d-sm-block d-md-none"></div>
 
             </div>
             {{-- icon --}}
@@ -34,9 +34,9 @@
 
 
             @foreach ($categories as $category)
-                <div class="col-6 col-md-2 text-center d-flex align-items-center justify-content-center my-3 d-none d-md-block">
+                <div class="col-2 my-3 d-none d-md-block">
                     
-                        <a href="{{route('categoryShow', $category)}}" class="btn rounded-pill d-flex align-items-center justify-content-center boxIcon">
+                        <a href="{{route('categoryShow', $category)}}" class="btn rounded-pill d-flex align-items-center justify-content-center boxIcon mx-auto">
                             <i class="{{ $category->icon }} fa-3x my-5 text-white categoryIcon"></i>
                             {{-- <h3 class="mb-4">{{ $category->name }}</h3> --}}
                         </a>
