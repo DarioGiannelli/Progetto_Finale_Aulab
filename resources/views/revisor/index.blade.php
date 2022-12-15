@@ -33,6 +33,7 @@
 
 @if ($product_to_check)
 
+
 <div class="container prodotto mb-5 text-dark">
     <div class="row">
         {{-- swiper --}}
@@ -77,10 +78,10 @@
                                                     validazione
                                                 </h4>
                                                 <p>Adult: <span class="{{$image->adult}}"></span> </p>
-                                                <p>Satira: <span class="{{$image->spoof}}"></span> </p>
-                                                <p>Medicina: <span class="{{$image->medical}}"></span> </p>
-                                                <p>Violenza: <span class="{{$image->violence}}"></span> </p>
-                                                <p>Contenuto ammiccante: <span class="{{$image->racy}}"></span> </p>
+                                                <p>Satire: <span class="{{$image->spoof}}"></span> </p>
+                                                <p>Medicine: <span class="{{$image->medical}}"></span> </p>
+                                                <p>Violence: <span class="{{$image->violence}}"></span> </p>
+                                                <p>Winking content: <span class="{{$image->racy}}"></span> </p>
 
                                             </div>
                                             {{-- fine validazione --}}
@@ -165,7 +166,7 @@
             
                         <h3>{{__('ui.category')}}:</h3>
             
-                        <a href="{{route('categoryShow', $product_to_check->category)}}" class="btn verde text-white rounded-pill btnCat">
+                        <a href="{{route('categoryShow', $product_to_check->category)}}" class="btn verde text-white ms-3 rounded-pill btnCat">
                         @if(session('locale') == 'en')
                             {{ $product_to_check->category->name_en }}
                         @else
@@ -182,18 +183,18 @@
                         <form action="{{Route('revisor.accept_product', ['product'=>$product_to_check])}}"method="POST">
                             @csrf
                             @method('PATCH')
-                           <button class="btn verde text-white rounded-pill" type="submit">{{__('auth.accept')}}</button>
+                           <button class="btn verde text-white rounded-pill my-1" type="submit">{{__('auth.accept')}}</button>
                         </form>
                     </div>
                     <div class="col-12 col-md-4 d-flex justify-content-center">
                         <form action="{{Route('revisor.reject_product', ['product'=>$product_to_check])}}"method="POST">
                             @csrf
                             @method('PATCH')
-                           <button class="btn rosso text-white rounded-pill" type="submit">{{__('auth.delete')}}</button>
+                           <button class="btn rosso text-white rounded-pill my-1" type="submit">{{__('auth.delete')}}</button>
                         </form>
                     </div>
                     <div class="col-12 col-md-4 d-flex justify-content-center">
-                        <a href="{{Route('products.dashboard')}}" class="btn btn-info rounded-pill btnCat">Dashboard</a>
+                        <a href="{{Route('products.dashboard')}}" class="btn blu text-white rounded-pill btnCat my-1">Dashboard</a>
                     </div>
                 </div>
                 </div>

@@ -15,9 +15,9 @@
                 />
                 @empty
                 <div class="col-12 min-vh-100">
-                    <div class="alert-warning py-3 shadow">
-                         <p class="lead">
-                             Non ci sono annunci per questa ricerca
+                    <div class="alert-warning py-3 text-center text-white">
+                         <p class="h3">
+                             {{ __('ui.noProducts') }}
                         </p>
                     <div>
                 </div>

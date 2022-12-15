@@ -1,16 +1,16 @@
 <div>
 
-<table class="table table-dark my-5 text-white table-striped">
+<table class="table table-light my-5 text-dark table-striped">
   <thead>
     <tr>
       <th scope="col">id</th>
-      <th scope="col">Revisiona</th>
+      <th scope="col">{{ __('ui.review') }}</th>
       <th scope="col">Status</th>
-      <th scope="col">Titolo</th>
-      <th scope="col">Categoria</th>
+      <th scope="col">{{ __('ui.title') }}</th>
+      <th scope="col">{{ __('ui.category') }}</th>
       {{-- <th scope="col" class="">Descrizione</th> --}}
-      <th scope="col">Prezzo</th>
-      <th scope="col" class="text-center">Azioni</th>
+      <th scope="col">{{ __('ui.priceShow') }}</th>
+      <th scope="col" class="text-center">{{ __('ui.action') }}</th>
       {{-- <th scope="col">Revisiona</th> --}}
     </tr>
   </thead>
@@ -40,7 +40,7 @@
       <td>€ {{$product->price}}</td>
       <td class='d-flex align-item-center justify-content-center'>
         <button class="btn rosso text-white rounded-pill" wire:click="deleteProduct({{$product->id}})">{{__('auth.delete')}}</button>
-        <a class="btn blu text-white rounded-pill" href="{{route('products.edit', $product)}}">{{__('auth.update')}}</a>
+        <a class="btn blu text-white rounded-pill ms-2" href="{{route('products.edit', $product)}}">{{__('auth.update')}}</a>
       </td>
 
       {{--COLONNA REVISIONA

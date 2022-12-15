@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             
             <div class="col-12">
-                <input type="text" wire:model="name"   class="form-control rounded-pill
+                <input type="text" wire:model="name"   class="form-control select rounded-pill
                  @error('name') is-invalid @enderror" value="{{ old('name') }}">
                 @error('name')
                 {{$message}}
@@ -13,7 +13,7 @@
             </div>
             
             <div class="col-12">
-                <input  type="text" wire:model="brand" class="form-control rounded-pill
+                <input  type="text" wire:model="brand" class="form-control select rounded-pill
                  @error('brand') is-invalid @enderror" value="{{ old('brand') }}">
                 @error('brand')
                     {{$message}}
@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-12 d-flex justify-content-center">
-                <textarea  id="" cols="50" rows="3"  wire:model="description" class="form-control
+                <textarea  id="" cols="50" rows="3"  wire:model="description" class="form-control select rounded-4
                  @error('description') is-invalid @enderror" >{{ old('description') }}</textarea>
                     
             </div>
@@ -65,7 +65,7 @@
 
 
             <div class="col-12">
-                <input  type="number" wire:model="price" class="form-control rounded-pill
+                <input  type="number" wire:model="price" class="form-control select rounded-pill
                  @error('price') is-invalid @enderror" value="{{ old('price') }}">
                 @error('price')
                     {{$message}}
@@ -75,7 +75,7 @@
     
     </div>
 
-    <button type="submit" class="btn-cust blu text-white btnForm btnForm2 rounded-pill">pubblica</button>
+    <button type="submit" class="btn-cust btnLogin text-white btnForm2 rounded-pill">pubblica</button>
 </form>
 
 
