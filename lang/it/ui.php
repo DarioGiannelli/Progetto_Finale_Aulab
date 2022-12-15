@@ -13,7 +13,7 @@ return [
     'ourCategories'=>'Le nostre categorie',
     'lastProducts'=>'Ultimi prodotti',
     'categoryName'=>'name',
-    'work'=>'Lavora con noi',
+    'work'=>'Diventa revisore',
     'contactUs'=>'Contattaci',
     'search'=>'cerca',
     'productName'=>'inserisci il nome del tuo prodotto',
@@ -39,6 +39,11 @@ return [
     'publishArticle'=>'pubblicane uno',
     'productToReview'=>'Prodotto da revisionare',
     'noProductToReview'=>'Nessun prodotto da revisionare',
-    'review'=>'Revisione'
+    'review'=>'Revisione',
+    'noProducts'=>'non ci sono annunci per questa ricerca',
+    'title'=>'Titolo',
+    'action'=>'Azioni',
+    'validation'=>'Validazione',
+    'creator'=>'Autore'
     
 ];

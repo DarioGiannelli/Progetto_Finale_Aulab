@@ -23,7 +23,7 @@
               <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
               </li>
-
+              {{-- lingue --}}
               <li class="nav-item dropdown">
                     <div class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         <i class="fa-solid fa-earth-europe"></i>
@@ -40,13 +40,6 @@
                     </ul>
                 </li>
 
-              <li class="nav-item">
-                  
-              </li>
-
-              <li class="nav-item">
-                  
-              </li>
 
               <li class="nav-item" id="christmas">
                   <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-gift"></i></a>
@@ -58,30 +51,7 @@
              
             @auth
 
-            {{-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{__('auth.user')}} {{ Auth::user()->name }}
-                </a>
-                <ul class="dropdown-menu">
 
-                        <li><a class="dropdown-item" href="#"></a></li>
-       
-                    @if(Auth::user()->is_revisor)
-                        <li>
-                            <a href="{{Route('revisor.index')}} " class="dropdown-item" >{{__('ui.revisor')}}
-                                <span class="badge rounded-pill bg-danger">
-                                    {{ App\Models\Product::toBeRevisionedCount()}}
-                                    <span class="visually-hidden">unread Messages</span> 
-                                </span>
-                            </a>
-                        </li> 
-                        <li>
-                            <a href="{{Route('products.dashboard')}}" class="dropdown-item">Dashboard</a>
-                        </li> 
-    
-                    @endif
-                </ul>
-            </li> --}}
              
                 <li class="nav-item">
                     <a href="{{ Route('products.create') }}" class="nav-link active">{{__('ui.product')}}</a>

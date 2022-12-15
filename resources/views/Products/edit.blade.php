@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-         <h1>{{$product->name}}</h1>
+         <h1 class="mt-4">{{$product->name}}</h1>
 
         </div>
     </div>

@@ -37,7 +37,7 @@
                         {{__('ui.whenShow')}}: {{$product->created_at->format('d/m/Y')}}</a>
                 </div>
               <div class="col-12">
-                  <span class="caption">Autore: {{$product->user->name ?? ''}}</span>
+                  <span class="caption">{{ __('ui.creator') }}: {{$product->user->name ?? ''}}</span>
               </div>
               <div class="col-12 mt-2">
                 <a href="{{route('products.show', $product)}}" class="btnCard rounded-pill"><i class="text-primary fa-solid fa-2x fa-circle-info iconCustom"></i></a> 

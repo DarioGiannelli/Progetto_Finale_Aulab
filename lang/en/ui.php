@@ -13,7 +13,7 @@ return [
     'ourCategories'=>'Our categories',
     'lastProducts'=>'Last products',
     'categoryName'=>'name_en',
-    'work'=>'Work with us',
+    'work'=>'Became revisor',
     'contactUs'=>'Contatct us',
     'search'=>'search',
     'productName'=>'insert the name of your product',
@@ -39,7 +39,15 @@ return [
     'publishArticle'=>'post one',
     'productToReview'=>'Product to review',
     'noProductToReview'=>'No product to review',
-    'review'=>'Review'
+    'review'=>'Review',
+    'noProducts'=>'There aren\'t products for this search',
+    'title'=>'Title',
+    'action'=>'Action',
+    'validation'=>'Validation',
+    'creator'=>'Creator'
+
+
+
 
 
 

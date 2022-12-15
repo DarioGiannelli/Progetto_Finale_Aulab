@@ -121,4 +121,5 @@ textarea:focus {
 input[type=file]::file-selector-button {
   background: transparent;
   border: none;
+  color: white;
 }
