@@ -39,7 +39,7 @@ class CreateProduct extends Component
         'description'=>'required|min:8',
         'price'=>'required|numeric',
         'category'=>'required',
-        'brand'=>'required|min:4',
+        'brand'=>'required',
         'images.*'=>'image|max:1024',
         'temporary_images.*'=>'image|max:1024',
     ];
@@ -47,6 +47,7 @@ class CreateProduct extends Component
     protected $messages = [
         'required'=>'Il campo è obbligatorio',
         'min'=>'Sono necessari almeno 4 caratteri',
+        'description.min'=>'Sono necessari almeno 8 caratteri',
         'numeric'=>'L\'importo deve essere un numero',
         'temporary_images.*.image'=>'I file devono essere immagini',
         'temporary_images.*.max'=>'L\'immagine dev\'essere massimo di 1mb',

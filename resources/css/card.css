@@ -182,7 +182,7 @@
     
     /*Hover - img che si alza*/
     .cardCust:hover .imgbox {
-      bottom: 200px;
+      bottom: 225px;
     }
     
     .cardCust:hover:before {

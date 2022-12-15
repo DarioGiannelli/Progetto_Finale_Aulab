@@ -1,7 +1,7 @@
 import './bootstrap';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './darkMode';
-import './christmasMode';
+// import './christmasMode';
 
 let confirm =  false;
 
