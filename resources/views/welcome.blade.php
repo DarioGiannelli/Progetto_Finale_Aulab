@@ -45,7 +45,7 @@
             @endforeach
         </div>
     </div>
-    <div class="container my-5">
+    <div class="container-fluid my-5">
         <div class="row">
             <div class="col-12">
                 <h2 class="display-3 text-center mt-5">{{__('ui.lastProducts')}}</h2>
@@ -111,12 +111,12 @@
             </div>
             </div>
             {{-- swiper grandi schermi card --}}
-            <div class="col-12 d-flex justify-content-center d-none d-md-block">
-                <div class="swiper mySwiper">
+            <div class="swiper mySwiper col-12 d-none d-md-block">
+                {{-- <div class="swiper mySwiper"> --}}
                     <div class="swiper-wrapper">
                         @foreach ($products as $product)
                             <div class="swiper-slide">
-                                <div class="col-12 col-md-4 my-5">
+                                <div class="col-12 col-md-4 my-5 d-flex justify-content-center w-100">
                                     <div class="cardCust position-relative">
                                         <div class="imgbox">
                                                 <img src="{{!$product->images()->get()->isEmpty() ?
@@ -159,7 +159,7 @@
                     </div>
                     {{-- <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div> --}}
-                </div>
+                {{-- </div> --}}
             </div>
             <div class="swiper-pagination mt-2"></div>
     </div>
