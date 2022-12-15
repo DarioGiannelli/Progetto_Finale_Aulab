@@ -24,12 +24,28 @@
                   <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
               </li>
 
+              <li class="nav-item dropdown">
+                    <div class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-earth-europe"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                     
+                            <li class="dropdown-item d-flex align-items-center">
+                                <x-_locale lang="it" nation="it"/> <p class="my-auto">Italiano</p>
+                            </li>
+                            <li class="dropdown-item d-flex align-items-center">
+                                <x-_locale lang="en" nation="gb"/> <p class="my-auto">English</p>
+                            </li>
+                    
+                    </ul>
+                </li>
+
               <li class="nav-item">
-                  <x-_locale lang="it" nation="it"/>
+                  
               </li>
 
               <li class="nav-item">
-                  <x-_locale lang="en" nation="gb"/>
+                  
               </li>
 
               <li class="nav-item" id="christmas">

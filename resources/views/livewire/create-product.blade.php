@@ -2,11 +2,6 @@
     
     
 <!-- FORM DI PROVA -->
-@if (session()->has('message'))
-    <div class="flex flex-rox justify-center my-2 alert alert-success rounded-pill">
-        {{ session('message') }}
-    </div>
-@endif
 
 <form wire:submit.prevent="store"> 
     @csrf
@@ -69,7 +64,7 @@
             </div>
 
             <div class="col-12">
-                <input type="number" placeholder="{{__('ui.productPrice')}}" wire:model="price" class="rounded-pill form-control @error('price') is-invalid @enderror" value="{{ old('price') }}">
+                <input type="number" placeholder="{{__('ui.productPrice')}}" wire:model="price" class="rounded-pill @error('price') is-invalid @enderror" value="{{ old('price') }}">
                 @error('price')
                     {{$message}}
                 @enderror
@@ -78,7 +73,12 @@
     
     </div>
 
-    <button type="submit" class="btn-cust blu text-white btnForm btnForm2 rounded-pill">{{__('ui.publishArticle')}}</button>
+    @if (session()->has('message'))
+        <div class="flex flex-rox justify-center my-2 alert alert-success rounded-pill">
+            {{ session('message') }}
+        </div>
+    @endif
+    <button type="submit" class="btn-cust btnLogin text-white btnForm2 rounded-pill">{{__('ui.publishArticle')}}</button>
 </form>
 
 </div>

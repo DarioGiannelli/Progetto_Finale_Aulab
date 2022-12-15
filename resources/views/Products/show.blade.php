@@ -28,7 +28,7 @@
                                                 @if ($product->images)
                                                     @foreach ($product->images as $image)
                                                         <div class="swiper-slide">
-                                                            <img src="{{$image->getUrl(200,300)}}" class="img-fluid"/>
+                                                            <img src="{{$image->getUrl(500,500)}}" class="img-fluid"/>
                                                         </div>
                                                     @endforeach
                                                 @else
@@ -57,7 +57,7 @@
                                                 @if ($product->images)
                                                     @foreach ($product->images as $image)
                                                         <div class="swiper-slide">
-                                                            <img src="{{$image->getUrl(200,300)}}" class="img-fluid rounded-4"/>
+                                                            <img src="{{$image->getUrl(500,500)}}" class="img-fluid rounded-4"/>
                                                         </div>
                                                     @endforeach
                                                 @endif
@@ -146,7 +146,7 @@
                                     <div class="row">
                                         <div class="col-12 d-flex justify-content-center">
                                             <img src="{{!$related->images()->get()->isEmpty() ?
-                                                $related->images()->first()->getUrl(200,300) : 'https://picsum.photos/seed/picsum/200/300'}}" alt="" srcset="" class="rounded-4 relatedImg my-2">
+                                                $related->images()->first()->getUrl(500,500) : 'https://picsum.photos/seed/picsum/200/300'}}" alt="" srcset="" class="rounded-4 relatedImg my-2">
                                         </div>
                                         <div class="col-12">
                                             <h5 class="text-center">{{$related->name}}</h5>

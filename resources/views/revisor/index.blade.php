@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         @if (session()->has('message'))
-            <div class="flex flex-rox justify-center my-2 alert alert-success">
+            <div class="flex flex-rox justify-center my-2 alert alert-success rounded-pill">
                 {{ session('message') }}
             </div>
         @endif

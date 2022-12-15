@@ -65,7 +65,7 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 10,
-            slidesPerView: 4,
+            slidesPerView: 3,
             freeMode: true,
             watchSlidesProgress: true,
             pagination: {
