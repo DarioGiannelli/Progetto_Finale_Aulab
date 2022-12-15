@@ -44,6 +44,7 @@ return [
     'title'=>'Titolo',
     'action'=>'Azioni',
     'validation'=>'Validazione',
-    'creator'=>'Autore'
+    'creator'=>'Autore',
+    'deny'=>'Rifiuta'
     
 ];

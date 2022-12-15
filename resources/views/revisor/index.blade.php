@@ -190,7 +190,7 @@
                         <form action="{{Route('revisor.reject_product', ['product'=>$product_to_check])}}"method="POST">
                             @csrf
                             @method('PATCH')
-                           <button class="btn rosso text-white rounded-pill my-1" type="submit">{{__('auth.delete')}}</button>
+                           <button class="btn rosso text-white rounded-pill my-1" type="submit">{{__('ui.deny')}}</button>
                         </form>
                     </div>
                     <div class="col-12 col-md-4 d-flex justify-content-center">

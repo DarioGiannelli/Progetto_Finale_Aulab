@@ -44,7 +44,9 @@ return [
     'title'=>'Title',
     'action'=>'Action',
     'validation'=>'Validation',
-    'creator'=>'Creator'
+    'creator'=>'Creator',
+    'deny'=>'Deny'
+
 
 
 
