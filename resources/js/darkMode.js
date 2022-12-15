@@ -20,7 +20,7 @@ if (localStorage.getItem('darkMode') == null) {
 
         starsWrapper.innerHTML = '';
     } else { //dark
-        toggle.style.transform = "translate(-30px)";
+        toggle.style.transform = "translate(-12px)";
 
         toggle.classList.add('toggleDark');
         toggle.classList.remove('toggleLight');
@@ -63,7 +63,7 @@ box.addEventListener('click' , ()=>{
 
         localStorage.setItem('darkMode', 'dark');
 
-        toggle.style.transform = "translate(-30px)";
+        toggle.style.transform = "translate(-12px)";
 
         toggle.classList.add('toggleDark');
         toggle.classList.remove('toggleLight');
