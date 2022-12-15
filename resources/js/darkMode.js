@@ -1,14 +1,17 @@
 let body = document.getElementById('body');
 let box = document.getElementById('box');
 let toggle = document.getElementById('toggle');
-// let starsWrapper = document.getElementById('starsWrapper');
+
+let christmas = document.getElementById('christmas');
+let titoloMasthead = document.getElementById('titoloMasthead');
+let spanMasthead = document.getElementById('spanMasthead');
 
 
-
-if (localStorage.getItem('darkMode') == null) {
-    localStorage.setItem('darkMode', 'light');
+if (localStorage.getItem('theme') == null) {
+    localStorage.setItem('theme', 'light');
 } else {
-    if (localStorage.getItem('darkMode') == 'light'){
+
+    if (localStorage.getItem('theme') == 'light'){
         
         toggle.style.transform = "translate(0px)";
 
@@ -16,16 +19,34 @@ if (localStorage.getItem('darkMode') == null) {
         toggle.classList.add('toggleLight');
 
         body.classList.remove('darkTheme');
-        // body.classList.add('lightTheme');
+
+        body.classList.remove('christmasTheme');
+
+        (titoloMasthead) ? titoloMasthead.classList.add('testoRosso') : console.log('');
+         
+        if (spanMasthead){
+           spanMasthead.classList.remove('span');
+           spanMasthead.classList.add('testoBianco');
+        }
+
+
 
         starsWrapper.innerHTML = '';
-    } else { //dark
+        snowWrapper.innerHTML = '';
+        
+
+
+
+    } else if (localStorage.getItem('theme') == 'darkStars') {
+
+        
+
         toggle.style.transform = "translate(-12px)";
 
         toggle.classList.add('toggleDark');
         toggle.classList.remove('toggleLight');
 
-        // body.classList.remove('lightTheme');
+   
         body.classList.add('darkTheme');
 
         let starsWrapper = document.querySelector ('#starsWrapper');
@@ -38,30 +59,48 @@ if (localStorage.getItem('darkMode') == null) {
             `
 
             starsWrapper.appendChild(div);
+
+
+
+    } else {
+        
+
+    
+         body.classList.add('christmasTheme');
+
+         (titoloMasthead) ? titoloMasthead.classList.add('testoRosso') : console.log('');
+         
+         if (spanMasthead){
+            spanMasthead.classList.remove('span');
+            spanMasthead.classList.add('testoBianco');
+         }
        
-
-        // starsWrapper.innerHTML = `
-        //     <div id="stars"></div>
-        //     <div id="stars2"></div>
-        //     <div id="stars3"></div>
-        //     <div id="stars4"></div>
-        // `
+ 
+         let snowWrapper = document.querySelector ('#snowWrapper');
+ 
+ 
+         for (let i = 0; i < 200; i++) {
+             let div = document.createElement('div');
+             div.classList.add('snow');
+            //  div.innerHTML = `
+            //      <div class="snow"></div>
+            //  `
+             
+         snowWrapper.appendChild(div);
+ 
+ 
+         }
+        
     }
-}
+};
 
-// console.log(loadPage);
-
-// let confirm = false;
-
-// body.classList.add('lightTheme');
-// toggle.classList.add('toggleLight');
-// starsWrapper.innerHTML = '';
+// NOTTE
 
 box.addEventListener('click' , ()=>{
 
-    if(localStorage.getItem('darkMode') == 'light'){
+    if(localStorage.getItem('theme') == 'light'){
 
-        localStorage.setItem('darkMode', 'dark');
+        localStorage.setItem('theme', 'darkStars');
 
         toggle.style.transform = "translate(-12px)";
 
@@ -84,22 +123,42 @@ box.addEventListener('click' , ()=>{
         starsWrapper.appendChild(div);
        
 
+    } else if (localStorage.getItem('theme') == 'xmas'){
+    
+        localStorage.setItem('theme', 'darkStars');
 
+        body.classList.remove('christmasTheme');
 
-        // starsWrapper.innerHTML = `
-        //     <div id="stars"></div>
-        //     <div id="stars2"></div>
-        //     <div id="stars3"></div>
-        //     <div id="stars4"></div>
-        // `
+        (titoloMasthead) ? titoloMasthead.classList.add('testoRosso') : console.log('');
+         
+        if (spanMasthead){
+           spanMasthead.classList.remove('span');
+           spanMasthead.classList.add('testoBianco');
+        }
 
+        toggle.style.transform = "translate(-12px)";
 
-            // confirm = true;
+        toggle.classList.add('toggleDark');
+        toggle.classList.remove('toggleLight');
 
+        snowWrapper.innerHTML = '';
+        body.classList.add('darkTheme');
+  
         
+        let starsWrapper = document.querySelector ('#starsWrapper');
 
-    } else {
-        localStorage.setItem('darkMode', 'light');
+       
+        let div = document.createElement('div');
+        div.classList.add('stars');
+        div.innerHTML = `
+        <div class="stars"></div>
+        `
+
+        starsWrapper.appendChild(div);
+       
+    
+    }else if (localStorage.getItem('theme') == 'darkStars'){
+        localStorage.setItem('theme', 'light');
 
         toggle.style.transform = "translate(0px)";
 
@@ -107,16 +166,96 @@ box.addEventListener('click' , ()=>{
         toggle.classList.add('toggleLight');
 
         body.classList.remove('darkTheme');
-        // body.classList.add('lightTheme');
-
-
+      
         starsWrapper.innerHTML = '';
 
-        // confirm = false;
-
-        
 
 
      }
 
  });
+
+
+//  NATALE
+
+ christmas.addEventListener('click' , ()=>{
+
+    if(localStorage.getItem('theme') == 'light'){
+
+        localStorage.setItem('theme', 'xmas');
+
+        body.classList.add('christmasTheme');
+
+        (titoloMasthead) ? titoloMasthead.classList.add('testoRosso') : console.log('');
+         
+        if (spanMasthead){
+           spanMasthead.classList.remove('span');
+           spanMasthead.classList.add('testoBianco');
+        }
+        
+        let snowWrapper = document.querySelector('#snowWrapper');
+
+        for (let i = 0; i < 200; i++) {
+            let div = document.createElement('div');
+        div.classList.add('snow');
+        // div.innerHTML = `
+        //     <div class="snow"></div>
+        // ` 
+        snowWrapper.appendChild(div);
+
+
+    }} else if (localStorage.getItem('theme') == 'darkStars'){
+    
+    localStorage.setItem('theme', 'xmas');
+
+    toggle.style.transform = "translate(0px)";
+
+        toggle.classList.remove('toggleDark');
+        toggle.classList.add('toggleLight');
+
+        body.classList.remove('darkTheme');
+      
+        starsWrapper.innerHTML = '';
+
+
+    body.classList.add('christmasTheme');
+
+    (titoloMasthead) ? titoloMasthead.classList.add('testoRosso') : console.log('');
+         
+    if (spanMasthead){
+       spanMasthead.classList.remove('span');
+       spanMasthead.classList.add('testoBianco');
+    }
+    
+    let snowWrapper = document.querySelector ('#snowWrapper');
+
+    for (let i = 0; i < 200; i++) {
+        let div = document.createElement('div');
+    div.classList.add('snow');
+    // div.innerHTML = `
+    //     <div class="snow"></div>
+    // ` 
+    snowWrapper.appendChild(div);
+
+
+    }} else if (localStorage.getItem('theme') == 'xmas'){
+        
+        localStorage.setItem('theme', 'light');
+
+        
+        snowWrapper.innerHTML = '';
+        
+        
+
+        body.classList.remove('christmasTheme');
+
+        (titoloMasthead) ? titoloMasthead.classList.add('testoRosso') : console.log('');
+         
+        if (spanMasthead){
+           spanMasthead.classList.remove('span');
+           spanMasthead.classList.add('testoBianco');
+        }
+
+        }
+
+     });
