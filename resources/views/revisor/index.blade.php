@@ -32,7 +32,7 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-6">
-                                                <img src="{{$image->getUrl(200,300)}}" />
+                                                <img src="{{$image->getUrl(500,500)}}" />
                                             </div>
                                             {{-- inizio tags --}}
 
@@ -100,7 +100,7 @@
                             @if ($product_to_check->images)
                                 @foreach ($product_to_check->images as $image)
                                 <div class="swiper-slide">
-                                <img src="{{$image->getUrl(200,300)}}" class="img-fluid rounded-4"/>
+                                <img src="{{$image->getUrl(500,500)}}" class="img-fluid rounded-4"/>
                                 </div>
                                 @endforeach
                                 @endif

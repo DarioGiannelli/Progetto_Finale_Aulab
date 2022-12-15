@@ -55,7 +55,7 @@
                     <div class="cardCust position-relative">
                         <div class="imgbox">
                                 <img src="{{!$product->images()->get()->isEmpty() ?
-                              $product->images()->first()->getUrl(200,300) : 'https://picsum.photos/seed/picsum/200/300'}}" alt="" srcset="" class="imgCust">
+                              $product->images()->first()->getUrl(500,400) : 'https://picsum.photos/seed/picsum/200/300'}}" alt="" srcset="" class="imgCust">
 
 
                         </div>
