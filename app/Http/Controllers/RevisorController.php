@@ -43,4 +43,11 @@ class RevisorController extends Controller
         return redirect('/')->with('message', 'L\'utente è diventato revisore');
 
     }
+
+    public function reviseSingleProduct(Product $product){
+
+        return view('revisor.index', ['product_to_check'=>$product]);
+
+
+    }
 }
