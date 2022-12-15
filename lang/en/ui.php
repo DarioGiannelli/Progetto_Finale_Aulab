@@ -3,7 +3,7 @@
 return [
     'allProducts'=>'Here\'s all our products',
     'ourProducts'=>'Our products',
-    'masthead'=>'everything you want to sell and buy...also from your sofa!',
+    'masthead'=>'everything you want to sell and buy...even from your sofa!',
     'products'=>'Products',
     'revisor'=>'Revisor zone',
     'categories'=>'Categories',
@@ -33,6 +33,14 @@ return [
     'publishAt'=>'Publish at',
     'priceShow'=>'Price',
     'selectedProduct'=>'Picked product',
-    'relatedProduct'=>'Related products'
+    'relatedProduct'=>'Related products',
+    'categoryProducts'=> 'Products by category',
+    'noProducts'=>'There are no products for this category',
+    'publishArticle'=>'post one',
+    'productToReview'=>'Product to review',
+    'noProductToReview'=>'No product to review',
+    'review'=>'Review'
+
+
 
 ];

@@ -51,3 +51,5 @@ Route::get('/products/dashboard',[ProductController::class, 'dashboard'])->name(
 Route::get('/products/{product}/edit',[ProductController::class, 'edit'])->name('products.edit');
 
 Route::post('/lingua/{lang}' , [FrontController::class, 'setLanguage'])->name('set_language_locale');
+
+// Route::get('/about' , [PublicController::class, 'about'])->name('about');
