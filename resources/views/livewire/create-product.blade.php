@@ -58,13 +58,19 @@
                 <select wire:model.defer="category" id="category" class="form-control select rounded-pill my-2">
                     <option class="text-dark">{{__('ui.productCategory')}}</option>
                     @foreach ($categories as $category)
-                        <option class="text-dark" value="{{$category->id}}">{{$category->name}}</option>
+                        <option class="text-dark" value="{{$category->id}}">
+                            @if(session('locale') == 'en')
+                                {{ $category->name_en }}
+                            @else
+                                {{$category->name}}
+                            @endif
+                        </option>
                     @endforeach
                 </select>            
             </div>
 
             <div class="col-12">
-                <input type="number" placeholder="{{__('ui.productPrice')}}" wire:model="price" class="rounded-pill @error('price') is-invalid @enderror" value="{{ old('price') }}">
+                <input type="number" step="any" placeholder="{{__('ui.productPrice')}}" wire:model="price" class="rounded-pill @error('price') is-invalid @enderror" value="{{ old('price') }}">
                 @error('price')
                     {{$message}}
                 @enderror

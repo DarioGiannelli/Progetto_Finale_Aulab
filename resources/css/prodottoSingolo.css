@@ -29,3 +29,7 @@
     /* max-width: 100px; */
     max-height: 150px;
   }
+
+  .btnCat{
+    width: fit-content;
+  }
