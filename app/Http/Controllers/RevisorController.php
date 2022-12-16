@@ -20,7 +20,8 @@ class RevisorController extends Controller
 
     public function acceptProduct(Product $product){
         $product->setAccepted(true);
-        return redirect()->back()->with('message','Annuncio promosso');
+        // return redirect()->back()->with('message','Annuncio promosso');
+        return redirect('/products/dashboard')->with('message','Annuncio pubblicato');
 
         
 
@@ -29,7 +30,8 @@ class RevisorController extends Controller
     public function rejectProduct(Product $product){
         
         $product->setAccepted(false);
-        return redirect()->back()->with('message','Annuncio non promosso');
+        // return redirect()->back()->with('message','Annuncio non promosso');
+        return redirect('/products/dashboard')->with('message1','Annuncio non promosso');
 
     }
 
@@ -47,7 +49,7 @@ class RevisorController extends Controller
     public function reviseSingleProduct(Product $product){
 
         return view('revisor.index', ['product_to_check'=>$product]);
-        return redirect()->back();
+        return redirect('products.dashboard');
 
 
     }

@@ -18,7 +18,10 @@
     @foreach($products as $product)
     <tr>
       <th scope="row" class="text-center">{{$product->id}}</th>
-      <td><a href="{{route('revisor.show', $product)}}" class="btnCard rounded-pill"><i class="fa-solid text-warning fa-2x fa-circle-info"></i></a></td>
+      <td><a href="{{route('revisor.show', $product)}}" class="btnCard rounded-pill"><i class="fa-solid text-warning fa-2x fa-circle-info"></i></a>
+    
+      
+    </td>
       
       <td>
         @if($product->is_accepted)

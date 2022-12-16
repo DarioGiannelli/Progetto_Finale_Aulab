@@ -11,14 +11,14 @@
             <div class="col-12">
                 <input class="rounded-pill" type="text" wire:model="name"  placeholder="{{__('ui.productName')}}" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}">
                 @error('name')
-                {{$message}}
+                    <p class="text-danger fw-bold">{{$message}}</p>
                 @enderror
             </div>
             
             <div class="col-12">
                 <input class="rounded-pill" type="text" placeholder="{{__('ui.productBrand')}}" wire:model="brand" class="form-control @error('brand') is-invalid @enderror" value="{{ old('brand') }}">
                 @error('brand')
-                    {{$message}}
+                    <p class="text-danger fw-bold">{{$message}}</p> 
                 @enderror
             </div>
 
@@ -27,13 +27,13 @@
                     
             </div>
             @error('description')
-                        {{$message}}
-                    @enderror
+                <p class="text-danger fw-bold">{{$message}}</p>
+            @enderror
 
             <div class="col-12">
                 <input type="file" wire:model="temporary_images" name="images" multiple class="rounded-pill @error('temporary_images.*') is-invalid @enderror" placeholder="img"/>
                 @error('temporary_images.*')
-                    {{$message}}
+                    <p class="text-danger fw-bold">{{$message}}</p>
                 @enderror
             </div>
 
@@ -72,7 +72,7 @@
             <div class="col-12">
                 <input type="number" placeholder="{{__('ui.productPrice')}}" wire:model="price" step="any" class="rounded-pill @error('price') is-invalid @enderror" value="{{ old('price') }}">
                 @error('price')
-                    {{$message}}
+                    <p class="text-danger fw-bold">{{$message}}</p>
                 @enderror
             </div>
         </div>

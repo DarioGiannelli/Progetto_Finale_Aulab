@@ -15,9 +15,6 @@ class EditProduct extends Component
     public $price;
     public $brand;
     public $category;
-    
-
-    
 
     protected $rules = [
       'name'=>'required|min:4',
@@ -32,6 +29,8 @@ class EditProduct extends Component
       'required'=>'Il campo è obbligatorio',
       'min'=>'Sono necessari almeno 4 caratteri',
       'numeric'=>'L\'importo deve essere un numero',
+      'description.min'=>'Sono necessari almeno 8 caratteri',
+
       
   ];
   public function updated($propertyName)
@@ -50,8 +49,7 @@ class EditProduct extends Component
             'description'=> $this->description,
             'price'=> $this->price,
             'brand'=> $this->brand,
-            'category_id'=>$this->category,
-            'image'=>$this->image
+            'category_id'=>$this->category
           ]);
 
        
