@@ -5,6 +5,7 @@
    $product->images()->first()->getUrl(500,400) : 'https://picsum.photos/seed/picsum/400/400'}}" alt="" srcset="" class="imgCust">
 
       </div>
+      
       <div class="details container-fluid">
           <div class="row">
               <div class="col-12">
